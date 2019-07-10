@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import KeychainSwift
 import TwicketSegmentedControl
 
 class LockerViewController: UIViewController {
@@ -15,18 +14,46 @@ class LockerViewController: UIViewController {
     let darkGray = UIColor(red: 85/255.0, green: 85/255.0, blue: 85/255.0, alpha: 1)
     let customGray = UIColor(red: 40/255.0, green: 40/255.0, blue: 40/255.0, alpha: 1)
     let green = UIColor(red: 51/255.0, green: 190/255.0, blue: 98/255.0, alpha: 1)
-    var previewCells: [Keys]?
- 
-    @IBOutlet weak var lockerTableView: UITableView!
+    var effect: UIVisualEffect!
+    
+    
+    @IBOutlet var addNewItemView: UIView!
+    @IBOutlet weak var websiteView: UIView!
+    @IBOutlet weak var notesView: UIView!
+    @IBOutlet weak var visualEffectView: UIVisualEffectView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        lockerTableView.reloadData()
+        notesView.alpha = 0
+        effect = visualEffectView.effect
+        visualEffectView.effect = nil
         setSegmentControl()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        lockerTableView.reloadData()
+    fileprivate func animateIn() {
+        
+        self.view.addSubview(addNewItemView)
+        addNewItemView.center = self.view.center
+        
+        addNewItemView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        addNewItemView.alpha = 0
+        
+        UIView.animate(withDuration: 0.4) {
+            self.visualEffectView.effect = self.effect
+            self.addNewItemView.alpha = 1
+            self.addNewItemView.transform = CGAffineTransform.identity
+        }
+    }
+    
+    fileprivate func animateOut() {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.addNewItemView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+            self.addNewItemView.alpha = 0
+            self.visualEffectView.effect = nil
+        }) { (sucess: Bool) in
+            self.addNewItemView.removeFromSuperview()
+        }
     }
     
     fileprivate func setSegmentControl() {
@@ -37,38 +64,43 @@ class LockerViewController: UIViewController {
         segmentedControl.font = UIFont(name: "Gemunu Libre", size: 18)!
         segmentedControl.sliderBackgroundColor = green
         segmentedControl.segmentsBackgroundColor = darkGray
-        segmentedControl.delegate = self as? TwicketSegmentedControlDelegate
+        segmentedControl.delegate = self
         segmentedControl.isSliderShadowHidden = false
         segmentedControl.backgroundColor = .clear
         
         view.addSubview(segmentedControl)
     }
+    
+    @IBAction func addNewWebsitePressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "addWebsiteSegue", sender: self)
+        animateOut()
+    }
+    
+    
+    @IBAction func addNewNotePressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "addNoteSegue", sender: self)
+        animateOut()
+    }
+    
+    
+    @IBAction func addButtonPressed(_ sender: Any) {
+        animateIn()
+    }
+    
+    
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        animateOut()
+    }
 }
 
-extension LockerViewController: UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let previewData = previewCells?[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PreviewCell", for: indexPath) as! PreviewTableViewCell
-        cell.selectionStyle = .none
-        cell.previewCells = previewData
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.isUserInteractionEnabled = true
-    }
-}
-
-extension LockerViewController: UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+extension LockerViewController: TwicketSegmentedControlDelegate {
+    func didSelect(_ segmentIndex: Int) {
+        if segmentIndex == 0 {
+            websiteView.alpha = 1
+            notesView.alpha = 0
+        } else {
+            websiteView.alpha = 0
+            notesView.alpha = 1
+        }
     }
 }

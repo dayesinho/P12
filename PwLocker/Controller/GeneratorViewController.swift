@@ -14,7 +14,7 @@ class GeneratorViewController: UIViewController, BEMCheckBoxDelegate {
     let numbers: String = "0123456789"
     let specialChar: String  = "!#$%&()'*+,-./:;<=>?@[]^_`{|}~"
     var charactersArray = [String]()
-    var numberOfChar = Int()
+    var numberOfChar = Int(23)
     
     @IBOutlet weak var numberCharTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -31,10 +31,6 @@ class GeneratorViewController: UIViewController, BEMCheckBoxDelegate {
         charactersArray = [letters , numbers , specialChar]
         passwordTextField.text = generateRandomString(numberOfCharacters: numberOfChar)
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        passwordTextField.text = generateRandomString(numberOfCharacters: numberOfChar)
-    }
 
     func getOneCheckBoxMinimum() {
         
@@ -45,7 +41,7 @@ class GeneratorViewController: UIViewController, BEMCheckBoxDelegate {
         default:
             specialCharBox.isEnabled = false
         }
-        
+
         switch numbersBox.on == true {
         case true:
             lettersBox.isEnabled = true
@@ -53,17 +49,19 @@ class GeneratorViewController: UIViewController, BEMCheckBoxDelegate {
         default:
             lettersBox.isEnabled = false
         }
-        
+
         switch specialCharBox.on == true {
         case true:
             lettersBox.isEnabled = true
             numbersBox.isEnabled = true
         default:
-            numbersBox.isEnabled = false
+          numbersBox.isEnabled = false
         }
     }
     
      func didTap(_ checkBox: BEMCheckBox) {
+        
+        getOneCheckBoxMinimum()
         
         if checkBox.on == true {
             switch checkBox.tag {
@@ -84,13 +82,13 @@ class GeneratorViewController: UIViewController, BEMCheckBoxDelegate {
             }
             passwordTextField.text = generateRandomString(numberOfCharacters: numberOfChar)
         }
-        getOneCheckBoxMinimum()
     }
     
     @IBAction func charactersSlider(_ sender: UISlider) {
     
         numberOfChar = Int(sender.value)
         numberCharTextField.text = String(numberOfChar)
+        passwordTextField.text = generateRandomString(numberOfCharacters: numberOfChar)
     }
     
     @IBAction func generateNewPassword(_ sender: Any) {

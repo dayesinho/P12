@@ -7,17 +7,11 @@
 //
 
 import UIKit
-import KeychainSwift
+
 
 class SettingsViewController: UIViewController {
-    
-    let keychain = KeychainSwift()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    func deleteAllDataKeychain() {
-        keychain.clear()
     }
 }

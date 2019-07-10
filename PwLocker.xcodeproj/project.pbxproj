@@ -10,7 +10,10 @@
 		01143A8822D11E180022AA79 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01143A8722D11E180022AA79 /* UIView.swift */; };
 		01182EA122D20B57001B9953 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01182EA022D20B57001B9953 /* Array.swift */; };
 		01182EA322D25C5B001B9953 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01182EA222D25C5B001B9953 /* XMLParser.swift */; };
-		01368FC822C7C31A00224C03 /* SaveEntityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01368FC722C7C31A00224C03 /* SaveEntityViewController.swift */; };
+		01182EA722D2D41B001B9953 /* WebsitesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01182EA622D2D41B001B9953 /* WebsitesViewController.swift */; };
+		01182EA922D2D467001B9953 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01182EA822D2D467001B9953 /* NotesViewController.swift */; };
+		01182F0D22D40853001B9953 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01182F0C22D40853001B9953 /* NoteTableViewCell.swift */; };
+		01368FC822C7C31A00224C03 /* SaveWebsiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01368FC722C7C31A00224C03 /* SaveWebsiteViewController.swift */; };
 		014F5B0E22C9A66A00F03EA3 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F5B0D22C9A66A00F03EA3 /* NewsTableViewCell.swift */; };
 		014F5B1022CAB7E000F03EA3 /* EmailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F5B0F22CAB7E000F03EA3 /* EmailTableViewCell.swift */; };
 		014F5B1222CAC20200F03EA3 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F5B1122CAC20200F03EA3 /* Alerts.swift */; };
@@ -22,8 +25,8 @@
 		0158B66722C2293F00BE425E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0158B66522C2293F00BE425E /* LaunchScreen.storyboard */; };
 		0158B68022C26C6100BE425E /* gemunu-libre.medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0158B67E22C26C6100BE425E /* gemunu-libre.medium.otf */; };
 		0158B68122C26C6100BE425E /* gemunu-libre.semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0158B67F22C26C6100BE425E /* gemunu-libre.semibold.otf */; };
-		019F6DC622C55DE500A05C68 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F6DC522C55DE500A05C68 /* DetailsViewController.swift */; };
-		019F6DCA22C6DD6800A05C68 /* PreviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F6DC922C6DD6800A05C68 /* PreviewTableViewCell.swift */; };
+		019F6DC622C55DE500A05C68 /* DetailWebsiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F6DC522C55DE500A05C68 /* DetailWebsiteViewController.swift */; };
+		019F6DCA22C6DD6800A05C68 /* WebsiteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F6DC922C6DD6800A05C68 /* WebsiteTableViewCell.swift */; };
 		019F6DCC22C6EE2900A05C68 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F6DCB22C6EE2900A05C68 /* String.swift */; };
 		019F6DCE22C718F900A05C68 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F6DCD22C718F900A05C68 /* NewsViewController.swift */; };
 		01CCFEF722C94F48005509E4 /* PasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CCFEF622C94F48005509E4 /* PasswordService.swift */; };
@@ -31,6 +34,10 @@
 		01CCFEFB22C95446005509E4 /* BreachModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CCFEFA22C95446005509E4 /* BreachModel.swift */; };
 		01CCFF0222C95A40005509E4 /* EmailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CCFF0122C95A40005509E4 /* EmailService.swift */; };
 		01CCFF0422C95B5E005509E4 /* EmailBreachModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CCFF0322C95B5E005509E4 /* EmailBreachModel.swift */; };
+		01E69C6922D409BD00D48542 /* WebsiteObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E69C6822D409BD00D48542 /* WebsiteObject.swift */; };
+		01E69C6B22D409E000D48542 /* NoteObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E69C6A22D409E000D48542 /* NoteObject.swift */; };
+		01E69C6D22D42CE600D48542 /* DetailNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E69C6C22D42CE600D48542 /* DetailNoteViewController.swift */; };
+		01E69C6F22D4C48600D48542 /* SaveNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E69C6E22D4C48600D48542 /* SaveNoteViewController.swift */; };
 		01F0D97822CEC67E005339AC /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F0D97722CEC67E005339AC /* Date.swift */; };
 		01F0D97C22CF6B2A005339AC /* PINCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F0D97B22CF6B2A005339AC /* PINCodeViewController.swift */; };
 		01F0D97E22D0B0C9005339AC /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F0D97D22D0B0C9005339AC /* ActivityIndicator.swift */; };
@@ -49,7 +56,10 @@
 		01143A8922D13AF50022AA79 /* CheckMarkHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckMarkHeader.h; sourceTree = "<group>"; };
 		01182EA022D20B57001B9953 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		01182EA222D25C5B001B9953 /* XMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
-		01368FC722C7C31A00224C03 /* SaveEntityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveEntityViewController.swift; sourceTree = "<group>"; };
+		01182EA622D2D41B001B9953 /* WebsitesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsitesViewController.swift; sourceTree = "<group>"; };
+		01182EA822D2D467001B9953 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		01182F0C22D40853001B9953 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		01368FC722C7C31A00224C03 /* SaveWebsiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveWebsiteViewController.swift; sourceTree = "<group>"; };
 		014F5B0D22C9A66A00F03EA3 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		014F5B0F22CAB7E000F03EA3 /* EmailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTableViewCell.swift; sourceTree = "<group>"; };
 		014F5B1122CAC20200F03EA3 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
@@ -63,8 +73,8 @@
 		0158B66822C2293F00BE425E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0158B67E22C26C6100BE425E /* gemunu-libre.medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gemunu-libre.medium.otf"; sourceTree = "<group>"; };
 		0158B67F22C26C6100BE425E /* gemunu-libre.semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gemunu-libre.semibold.otf"; sourceTree = "<group>"; };
-		019F6DC522C55DE500A05C68 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		019F6DC922C6DD6800A05C68 /* PreviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewTableViewCell.swift; sourceTree = "<group>"; };
+		019F6DC522C55DE500A05C68 /* DetailWebsiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWebsiteViewController.swift; sourceTree = "<group>"; };
+		019F6DC922C6DD6800A05C68 /* WebsiteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteTableViewCell.swift; sourceTree = "<group>"; };
 		019F6DCB22C6EE2900A05C68 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		019F6DCD22C718F900A05C68 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		01CCFEF622C94F48005509E4 /* PasswordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordService.swift; sourceTree = "<group>"; };
@@ -72,6 +82,10 @@
 		01CCFEFA22C95446005509E4 /* BreachModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreachModel.swift; sourceTree = "<group>"; };
 		01CCFF0122C95A40005509E4 /* EmailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailService.swift; sourceTree = "<group>"; };
 		01CCFF0322C95B5E005509E4 /* EmailBreachModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailBreachModel.swift; sourceTree = "<group>"; };
+		01E69C6822D409BD00D48542 /* WebsiteObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteObject.swift; sourceTree = "<group>"; };
+		01E69C6A22D409E000D48542 /* NoteObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteObject.swift; sourceTree = "<group>"; };
+		01E69C6C22D42CE600D48542 /* DetailNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNoteViewController.swift; sourceTree = "<group>"; };
+		01E69C6E22D4C48600D48542 /* SaveNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveNoteViewController.swift; sourceTree = "<group>"; };
 		01F0D97722CEC67E005339AC /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		01F0D97B22CF6B2A005339AC /* PINCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PINCodeViewController.swift; sourceTree = "<group>"; };
 		01F0D97D22D0B0C9005339AC /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
@@ -99,6 +113,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01182F0E22D40880001B9953 /* RealmObjects */ = {
+			isa = PBXGroup;
+			children = (
+				01E69C6822D409BD00D48542 /* WebsiteObject.swift */,
+				01E69C6A22D409E000D48542 /* NoteObject.swift */,
+			);
+			path = RealmObjects;
+			sourceTree = "<group>";
+		};
 		0158B65022C2293F00BE425E = {
 			isa = PBXGroup;
 			children = (
@@ -134,8 +157,12 @@
 			isa = PBXGroup;
 			children = (
 				01FE216022C2E54F00BEA529 /* LockerViewController.swift */,
-				019F6DC522C55DE500A05C68 /* DetailsViewController.swift */,
-				01368FC722C7C31A00224C03 /* SaveEntityViewController.swift */,
+				01182EA622D2D41B001B9953 /* WebsitesViewController.swift */,
+				019F6DC522C55DE500A05C68 /* DetailWebsiteViewController.swift */,
+				01182EA822D2D467001B9953 /* NotesViewController.swift */,
+				01E69C6C22D42CE600D48542 /* DetailNoteViewController.swift */,
+				01368FC722C7C31A00224C03 /* SaveWebsiteViewController.swift */,
+				01E69C6E22D4C48600D48542 /* SaveNoteViewController.swift */,
 				01FE216C22C470DE00BEA529 /* BreachesViewController.swift */,
 				01FE216822C46D1400BEA529 /* PasswordViewController.swift */,
 				01FE216A22C46D2500BEA529 /* EmailViewController.swift */,
@@ -152,7 +179,8 @@
 			children = (
 				0158B66022C2293F00BE425E /* Main.storyboard */,
 				0158B66522C2293F00BE425E /* LaunchScreen.storyboard */,
-				019F6DC922C6DD6800A05C68 /* PreviewTableViewCell.swift */,
+				019F6DC922C6DD6800A05C68 /* WebsiteTableViewCell.swift */,
+				01182F0C22D40853001B9953 /* NoteTableViewCell.swift */,
 				014F5B0F22CAB7E000F03EA3 /* EmailTableViewCell.swift */,
 				014F5B0D22C9A66A00F03EA3 /* NewsTableViewCell.swift */,
 			);
@@ -162,6 +190,7 @@
 		0158B67022C22ADC00BE425E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				01182F0E22D40880001B9953 /* RealmObjects */,
 				0158B67D22C24C8F00BE425E /* Networking */,
 			);
 			path = Model;
@@ -366,27 +395,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01368FC822C7C31A00224C03 /* SaveEntityViewController.swift in Sources */,
+				01E69C6B22D409E000D48542 /* NoteObject.swift in Sources */,
+				01368FC822C7C31A00224C03 /* SaveWebsiteViewController.swift in Sources */,
 				01CCFF0422C95B5E005509E4 /* EmailBreachModel.swift in Sources */,
 				014F5B1022CAB7E000F03EA3 /* EmailTableViewCell.swift in Sources */,
 				01FE216B22C46D2500BEA529 /* EmailViewController.swift in Sources */,
+				01182EA922D2D467001B9953 /* NotesViewController.swift in Sources */,
 				01F0D97E22D0B0C9005339AC /* ActivityIndicator.swift in Sources */,
 				01CCFEFB22C95446005509E4 /* BreachModel.swift in Sources */,
+				01E69C6922D409BD00D48542 /* WebsiteObject.swift in Sources */,
 				01F0D97C22CF6B2A005339AC /* PINCodeViewController.swift in Sources */,
 				01143A8822D11E180022AA79 /* UIView.swift in Sources */,
+				01E69C6F22D4C48600D48542 /* SaveNoteViewController.swift in Sources */,
 				014F5B1422CC019100F03EA3 /* RangeModel.swift in Sources */,
+				01E69C6D22D42CE600D48542 /* DetailNoteViewController.swift in Sources */,
 				01182EA122D20B57001B9953 /* Array.swift in Sources */,
+				01182F0D22D40853001B9953 /* NoteTableViewCell.swift in Sources */,
 				01CCFEF922C952B0005509E4 /* BreachNewsService.swift in Sources */,
-				019F6DCA22C6DD6800A05C68 /* PreviewTableViewCell.swift in Sources */,
+				019F6DCA22C6DD6800A05C68 /* WebsiteTableViewCell.swift in Sources */,
 				01FE216322C2E57200BEA529 /* GeneratorViewController.swift in Sources */,
 				01FE217022C4824500BEA529 /* TextField.swift in Sources */,
+				01182EA722D2D41B001B9953 /* WebsitesViewController.swift in Sources */,
 				01FE216D22C470DE00BEA529 /* BreachesViewController.swift in Sources */,
 				0158B65D22C2293F00BE425E /* AppDelegate.swift in Sources */,
 				01FE216122C2E54F00BEA529 /* LockerViewController.swift in Sources */,
 				01FE216922C46D1400BEA529 /* PasswordViewController.swift in Sources */,
 				01CCFF0222C95A40005509E4 /* EmailService.swift in Sources */,
 				019F6DCC22C6EE2900A05C68 /* String.swift in Sources */,
-				019F6DC622C55DE500A05C68 /* DetailsViewController.swift in Sources */,
+				019F6DC622C55DE500A05C68 /* DetailWebsiteViewController.swift in Sources */,
 				01FE216522C2E57F00BEA529 /* SettingsViewController.swift in Sources */,
 				01CCFEF722C94F48005509E4 /* PasswordService.swift in Sources */,
 				01F0D97822CEC67E005339AC /* Date.swift in Sources */,
