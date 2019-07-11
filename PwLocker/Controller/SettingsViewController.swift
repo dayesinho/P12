@@ -15,3 +15,11 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
     }
 }
+
+
+// To install on the settings / Delete all data:
+
+//try! realm.write {
+//    realm.deleteAll()
+//}
+//

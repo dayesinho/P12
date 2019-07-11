@@ -23,6 +23,10 @@ class SaveNoteViewController: UIViewController {
         print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     @IBAction func saveButtonPressed(_ sender: UIButton) {
         
         noteObject.noteTitle = noteTitleTextField.text

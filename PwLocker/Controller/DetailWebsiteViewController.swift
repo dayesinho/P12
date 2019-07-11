@@ -11,7 +11,7 @@ import RealmSwift
 
 class DetailWebsiteViewController: UIViewController {
     
-    let realm = try? Realm()
+    let realm = try! Realm()
     var websiteObject: WebsiteObject?
     
     @IBOutlet weak var emailAddressTextField: UITextField!
@@ -28,7 +28,7 @@ class DetailWebsiteViewController: UIViewController {
         
         showWebsiteDetails()
     }
-
+    
     fileprivate func showWebsiteDetails() {
         
         emailAddressTextField.text = websiteObject?.emailAddress
@@ -40,11 +40,11 @@ class DetailWebsiteViewController: UIViewController {
     
     @IBAction func editButtonPressed(_ sender: UIButton) {
         
-//        emailAddressTextField.backgroundColor = UIColor.white
-//        loginTextField.backgroundColor = UIColor.white
-//        passwordTextField.backgroundColor = UIColor.white
-//        websiteTextField.backgroundColor = UIColor.white
-//        nameTextfield.backgroundColor = UIColor.white
+        //        emailAddressTextField.backgroundColor = UIColor.white
+        //        loginTextField.backgroundColor = UIColor.white
+        //        passwordTextField.backgroundColor = UIColor.white
+        //        websiteTextField.backgroundColor = UIColor.white
+        //        nameTextfield.backgroundColor = UIColor.white
         
         emailAddressTextField.isUserInteractionEnabled = true
         loginTextField.isUserInteractionEnabled = true
@@ -59,26 +59,13 @@ class DetailWebsiteViewController: UIViewController {
     
     @IBAction func saveButtonPressed(_ sender: Any) {
         
-        if let websiteObject = websiteObject {
-            do {
-                try self.realm?.write {
-                websiteObject.emailAddress = emailAddressTextField.text
-//                _ = realm?.objects(WebsiteObject.self)
-                }
-            }
-            catch {
-                print("Error")
-            }
+        try? write {
+            websiteObject?.emailAddress = emailAddressTextField.text
+            websiteObject?.login = loginTextField.text
+            websiteObject?.password = passwordTextField.text
+            websiteObject?.website = websiteTextField.text
+            websiteObject?.name = nameTextfield.text
         }
-        websiteObject?.emailAddress = emailAddressTextField.text
-        websiteObject?.login = loginTextField.text
-        websiteObject?.password = passwordTextField.text
-        websiteObject?.website = websiteTextField.text
-        websiteObject?.name = nameTextfield.text
-
-//        try? realm?.write {
-//            realm?.add(websiteObject!)
-//        }
         
         saveButton.alpha = 0
         cancelButton.alpha = 0
@@ -97,4 +84,25 @@ class DetailWebsiteViewController: UIViewController {
         editButton.isEnabled = true
     }
     
+    @IBAction func deleteButtonPressed(_ sender: Any) {
+        
+        guard let websiteObjUnwrap = websiteObject else { return }
+        try? realm.write {
+            realm.delete(websiteObjUnwrap)
+        }
+        _ = navigationController?.popViewController(animated: true)
+    }
+    
+    
+    
+    public func write(_ block: (() throws -> Void)) throws {
+        realm.beginWrite()
+        do {
+            try block()
+        } catch let error {
+            if realm.isInWriteTransaction { realm.cancelWrite() }
+            throw error
+        }
+        if realm.isInWriteTransaction { try realm.commitWrite() }
+    }
 }

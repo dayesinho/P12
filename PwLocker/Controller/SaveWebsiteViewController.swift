@@ -25,6 +25,10 @@ class SaveWebsiteViewController: UIViewController {
         print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     @IBAction func cancelButton(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }

@@ -227,130 +227,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="645"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hmu-mT-GKu">
-                                <rect key="frame" x="30" y="44" width="354" height="517"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="QKU-Tb-Xkj">
+                                <rect key="frame" x="20" y="64" width="374" height="487"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="QKU-Tb-Xkj">
-                                        <rect key="frame" x="20" y="35" width="254" height="447"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNM-JP-CQT">
-                                                <rect key="frame" x="0.0" y="0.0" width="254" height="25"/>
-                                                <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="21"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Adk-GN-pbE">
-                                                <rect key="frame" x="0.0" y="47" width="254" height="25"/>
-                                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                        <integer key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbd-96-0oZ">
-                                                <rect key="frame" x="0.0" y="94" width="254" height="24.5"/>
-                                                <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="21"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cHm-eW-Usu">
-                                                <rect key="frame" x="0.0" y="140.5" width="254" height="25"/>
-                                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                        <integer key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LI3-TT-TRl">
-                                                <rect key="frame" x="0.0" y="187.5" width="254" height="25"/>
-                                                <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="21"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cnp-Yv-2Pa">
-                                                <rect key="frame" x="0.0" y="234.5" width="254" height="25"/>
-                                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                        <integer key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaq-EE-nlz">
-                                                <rect key="frame" x="0.0" y="281.5" width="254" height="25"/>
-                                                <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="21"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dH5-ZA-nQD">
-                                                <rect key="frame" x="0.0" y="328.5" width="254" height="24.5"/>
-                                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                        <integer key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7x-Rc-e6u">
-                                                <rect key="frame" x="0.0" y="375" width="254" height="25"/>
-                                                <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="21"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KCY-Hr-cUF">
-                                                <rect key="frame" x="0.0" y="422" width="254" height="25"/>
-                                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                        <integer key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSt-Rt-fWI">
-                                        <rect key="frame" x="284" y="82" width="50" height="25"/>
-                                        <color key="backgroundColor" red="0.1980436444" green="0.74697035550000002" blue="0.38535201549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="20"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Copy"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNM-JP-CQT">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="29"/>
+                                        <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Adk-GN-pbE">
+                                        <rect key="frame" x="0.0" y="51" width="374" height="29"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -360,13 +251,19 @@
                                                 <integer key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UmU-xu-FyX">
-                                        <rect key="frame" x="284" y="175.5" width="50" height="25"/>
-                                        <color key="backgroundColor" red="0.1980436444" green="0.74697035550000002" blue="0.38535201549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="20"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Copy"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbd-96-0oZ">
+                                        <rect key="frame" x="0.0" y="102" width="374" height="28.5"/>
+                                        <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cHm-eW-Usu">
+                                        <rect key="frame" x="0.0" y="152.5" width="374" height="29"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -376,13 +273,19 @@
                                                 <integer key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JbD-6r-Gk9">
-                                        <rect key="frame" x="284" y="269.5" width="50" height="25"/>
-                                        <color key="backgroundColor" red="0.1980436444" green="0.74697035550000002" blue="0.38535201549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="20"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Copy"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LI3-TT-TRl">
+                                        <rect key="frame" x="0.0" y="203.5" width="374" height="29"/>
+                                        <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cnp-Yv-2Pa">
+                                        <rect key="frame" x="0.0" y="254.5" width="374" height="29"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -392,13 +295,19 @@
                                                 <integer key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Km9-dh-v1c">
-                                        <rect key="frame" x="284" y="363.5" width="50" height="24.5"/>
-                                        <color key="backgroundColor" red="0.1980436444" green="0.74697035550000002" blue="0.38535201549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="20"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Copy"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaq-EE-nlz">
+                                        <rect key="frame" x="0.0" y="305.5" width="374" height="29"/>
+                                        <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dH5-ZA-nQD">
+                                        <rect key="frame" x="0.0" y="356.5" width="374" height="28.5"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -408,13 +317,19 @@
                                                 <integer key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqK-YW-cuh">
-                                        <rect key="frame" x="284" y="457" width="50" height="25"/>
-                                        <color key="backgroundColor" red="0.1980436444" green="0.74697035550000002" blue="0.38535201549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="20"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Copy"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7x-Rc-e6u">
+                                        <rect key="frame" x="0.0" y="407" width="374" height="29"/>
+                                        <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KCY-Hr-cUF">
+                                        <rect key="frame" x="0.0" y="458" width="374" height="29"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -424,55 +339,24 @@
                                                 <integer key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                    </button>
+                                    </textField>
                                 </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="UmU-xu-FyX" firstAttribute="centerY" secondItem="cHm-eW-Usu" secondAttribute="centerY" id="0UU-rK-xaG"/>
-                                    <constraint firstItem="oqK-YW-cuh" firstAttribute="leading" secondItem="QKU-Tb-Xkj" secondAttribute="trailing" constant="10" id="1aM-1m-YeG"/>
-                                    <constraint firstItem="JbD-6r-Gk9" firstAttribute="bottom" secondItem="cnp-Yv-2Pa" secondAttribute="bottom" id="2rs-XY-70j"/>
-                                    <constraint firstItem="Km9-dh-v1c" firstAttribute="bottom" secondItem="dH5-ZA-nQD" secondAttribute="bottom" id="55Y-Up-DzR"/>
-                                    <constraint firstItem="FSt-Rt-fWI" firstAttribute="centerY" secondItem="Adk-GN-pbE" secondAttribute="centerY" id="5wX-C3-aDb"/>
-                                    <constraint firstItem="Km9-dh-v1c" firstAttribute="top" secondItem="dH5-ZA-nQD" secondAttribute="top" id="7Sn-QO-wtC"/>
-                                    <constraint firstItem="JbD-6r-Gk9" firstAttribute="top" secondItem="cnp-Yv-2Pa" secondAttribute="top" id="9dn-xo-hwd"/>
-                                    <constraint firstItem="oqK-YW-cuh" firstAttribute="top" secondItem="KCY-Hr-cUF" secondAttribute="top" id="AkP-uo-EM2"/>
-                                    <constraint firstItem="UmU-xu-FyX" firstAttribute="top" secondItem="cHm-eW-Usu" secondAttribute="top" id="IiR-O8-yfd"/>
-                                    <constraint firstItem="Km9-dh-v1c" firstAttribute="leading" secondItem="QKU-Tb-Xkj" secondAttribute="trailing" constant="10" id="PFH-Sj-E94"/>
-                                    <constraint firstItem="Km9-dh-v1c" firstAttribute="centerY" secondItem="dH5-ZA-nQD" secondAttribute="centerY" id="QoV-DZ-hqa"/>
-                                    <constraint firstItem="QKU-Tb-Xkj" firstAttribute="top" secondItem="hmu-mT-GKu" secondAttribute="top" constant="35" id="R7S-60-7Rk"/>
-                                    <constraint firstAttribute="trailing" secondItem="JbD-6r-Gk9" secondAttribute="trailing" constant="20" id="TeL-Hl-dgL"/>
-                                    <constraint firstItem="JbD-6r-Gk9" firstAttribute="leading" secondItem="QKU-Tb-Xkj" secondAttribute="trailing" constant="10" id="UnD-3A-Nlk"/>
-                                    <constraint firstAttribute="trailing" secondItem="oqK-YW-cuh" secondAttribute="trailing" constant="20" id="WSg-aU-TyB"/>
-                                    <constraint firstAttribute="trailing" secondItem="QKU-Tb-Xkj" secondAttribute="trailing" constant="80" id="WVB-ni-dle"/>
-                                    <constraint firstItem="JbD-6r-Gk9" firstAttribute="centerY" secondItem="cnp-Yv-2Pa" secondAttribute="centerY" id="XQd-Fi-UAq"/>
-                                    <constraint firstItem="oqK-YW-cuh" firstAttribute="bottom" secondItem="KCY-Hr-cUF" secondAttribute="bottom" id="aaR-85-vwR"/>
-                                    <constraint firstAttribute="trailing" secondItem="UmU-xu-FyX" secondAttribute="trailing" constant="20" id="bpC-FZ-Ayk"/>
-                                    <constraint firstItem="UmU-xu-FyX" firstAttribute="bottom" secondItem="cHm-eW-Usu" secondAttribute="bottom" id="eMS-GK-T0l"/>
-                                    <constraint firstAttribute="bottom" secondItem="QKU-Tb-Xkj" secondAttribute="bottom" constant="35" id="mKl-63-I48"/>
-                                    <constraint firstItem="QKU-Tb-Xkj" firstAttribute="leading" secondItem="hmu-mT-GKu" secondAttribute="leading" constant="20" id="msb-ML-UZg"/>
-                                    <constraint firstAttribute="trailing" secondItem="Km9-dh-v1c" secondAttribute="trailing" constant="20" id="peF-Wp-MSV"/>
-                                    <constraint firstItem="UmU-xu-FyX" firstAttribute="leading" secondItem="QKU-Tb-Xkj" secondAttribute="trailing" constant="10" id="u2y-Sw-ykY"/>
-                                    <constraint firstItem="FSt-Rt-fWI" firstAttribute="bottom" secondItem="Adk-GN-pbE" secondAttribute="bottom" id="uDB-gN-fgY"/>
-                                    <constraint firstItem="FSt-Rt-fWI" firstAttribute="leading" secondItem="QKU-Tb-Xkj" secondAttribute="trailing" constant="10" id="vEw-Ud-mhd"/>
-                                    <constraint firstItem="FSt-Rt-fWI" firstAttribute="top" secondItem="Adk-GN-pbE" secondAttribute="top" id="xM1-Xf-CSq"/>
-                                    <constraint firstAttribute="trailing" secondItem="FSt-Rt-fWI" secondAttribute="trailing" constant="20" id="xfJ-jw-VCE"/>
-                                    <constraint firstItem="oqK-YW-cuh" firstAttribute="centerY" secondItem="KCY-Hr-cUF" secondAttribute="centerY" id="yUd-wi-aiR"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="X6O-va-xzv">
-                                <rect key="frame" x="90" y="581" width="234" height="30"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="X6O-va-xzv">
+                                <rect key="frame" x="50" y="571" width="314" height="40"/>
                                 <subviews>
-                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUS-yU-Kpe">
-                                        <rect key="frame" x="0.0" y="0.0" width="67" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CiD-qq-zIg">
+                                        <rect key="frame" x="0.0" y="0.0" width="91.5" height="40"/>
+                                        <color key="backgroundColor" red="0.57983507089999997" green="0.1247337706" blue="0.15956825990000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Delete">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="deleteButtonPressed:" destination="kje-Fw-u2I" eventType="touchUpInside" id="KX9-cn-NbJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUS-yU-Kpe">
+                                        <rect key="frame" x="111.5" y="0.0" width="91" height="40"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -481,8 +365,8 @@
                                             <action selector="cancelButtonPressed:" destination="kje-Fw-u2I" eventType="touchUpInside" id="uH8-3d-ZKI"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqm-Re-2mT">
-                                        <rect key="frame" x="167" y="0.0" width="67" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqm-Re-2mT">
+                                        <rect key="frame" x="222.5" y="0.0" width="91.5" height="40"/>
                                         <color key="backgroundColor" red="0.1980436444" green="0.74697035550000002" blue="0.38535201549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Save">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -492,18 +376,20 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="0An-Jf-1dX"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.15518405569999999" green="0.15518405569999999" blue="0.15518405569999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="rcq-R9-hOt" firstAttribute="trailing" secondItem="hmu-mT-GKu" secondAttribute="trailing" constant="30" id="8No-Lf-1BA"/>
+                            <constraint firstItem="X6O-va-xzv" firstAttribute="top" secondItem="QKU-Tb-Xkj" secondAttribute="bottom" constant="20" id="2V4-NR-bmA"/>
                             <constraint firstItem="X6O-va-xzv" firstAttribute="bottom" secondItem="rcq-R9-hOt" secondAttribute="bottom" id="9j4-vy-hR1"/>
-                            <constraint firstItem="hmu-mT-GKu" firstAttribute="leading" secondItem="rcq-R9-hOt" secondAttribute="leading" constant="30" id="Lzr-ch-Y5v"/>
-                            <constraint firstItem="X6O-va-xzv" firstAttribute="top" secondItem="hmu-mT-GKu" secondAttribute="bottom" constant="20" id="SAH-LD-zvg"/>
-                            <constraint firstItem="hmu-mT-GKu" firstAttribute="top" secondItem="rcq-R9-hOt" secondAttribute="top" id="Unb-JZ-D8y"/>
-                            <constraint firstItem="X6O-va-xzv" firstAttribute="leading" secondItem="rcq-R9-hOt" secondAttribute="leading" constant="90" id="X1V-E5-KDY"/>
-                            <constraint firstItem="rcq-R9-hOt" firstAttribute="bottom" secondItem="hmu-mT-GKu" secondAttribute="bottom" constant="50" id="fFm-Z5-3EG"/>
-                            <constraint firstItem="rcq-R9-hOt" firstAttribute="trailing" secondItem="X6O-va-xzv" secondAttribute="trailing" constant="90" id="lLc-Jy-FYS"/>
+                            <constraint firstItem="QKU-Tb-Xkj" firstAttribute="leading" secondItem="rcq-R9-hOt" secondAttribute="leading" constant="20" id="AA9-EV-nuP"/>
+                            <constraint firstItem="QKU-Tb-Xkj" firstAttribute="top" secondItem="rcq-R9-hOt" secondAttribute="top" constant="20" id="BoG-aK-ZhU"/>
+                            <constraint firstItem="rcq-R9-hOt" firstAttribute="trailing" secondItem="QKU-Tb-Xkj" secondAttribute="trailing" constant="20" id="LUt-Vd-61T"/>
+                            <constraint firstItem="X6O-va-xzv" firstAttribute="leading" secondItem="rcq-R9-hOt" secondAttribute="leading" constant="50" id="X1V-E5-KDY"/>
+                            <constraint firstItem="rcq-R9-hOt" firstAttribute="trailing" secondItem="X6O-va-xzv" secondAttribute="trailing" constant="50" id="lLc-Jy-FYS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rcq-R9-hOt"/>
                     </view>
@@ -2127,7 +2013,7 @@
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="25"/>
+                                                            <integer key="value" value="35"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
