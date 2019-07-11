@@ -10,8 +10,6 @@ import UIKit
 
 class NewsViewController: UIViewController {
 
-    let breachNewsService = BreachNewsService()
-    var newsBreach: [BreachModel]?
     let feedParser = FeedParser()
     private var rssItems: [RSSItem]?
     
@@ -22,7 +20,6 @@ class NewsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        pushNewsBreaches()
         fetchData()
     }
     
@@ -31,23 +28,8 @@ class NewsViewController: UIViewController {
         feedParser.parseFeed(url: "https://feeds.feedburner.com/HaveIBeenPwnedLatestBreaches?format=xml") { (rssItems) in
             self.toggleActivityIndicator(loadingLabel: self.loadingLabel, activityIndicator: self.activityIndicator, shown: false)
             self.rssItems = rssItems
-            
             OperationQueue.main.addOperation {
-                self.newsTableView.reloadSections(IndexSet(integer: 0), with: .left)
-            }
-        }
-    }
-    
-    
-    func pushNewsBreaches() {
-        toggleActivityIndicator(loadingLabel: loadingLabel, activityIndicator: activityIndicator, shown: true)
-        breachNewsService.getBreachesNews { (success, breachNews) in
-            self.toggleActivityIndicator(loadingLabel: self.loadingLabel, activityIndicator: self.activityIndicator, shown: false)
-            if success, let breachNews = breachNews {
-                self.newsBreach = breachNews
-                self.newsTableView.reloadData()
-            } else {
-                self.showAlert(title: "Error", message: "We couldn't load the news, sorry.")
+            self.newsTableView.reloadData()
             }
         }
     }
@@ -55,23 +37,29 @@ class NewsViewController: UIViewController {
 
 extension NewsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         guard let rssItems = rssItems else { return 0 }
-//        guard let newsUnwrap = newsBreach else { return 0 }
-//        return newsUnwrap.count
         return rssItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-//        let newsData = newsBreach?[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsTableViewCell
         if let item = rssItems?[indexPath.item] {
             cell.item = item
         }
         cell.selectionStyle = .none
-//        cell.breachNews = newsData
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, 0, 60, 0)
+        cell.layer.transform = rotationTransform
+        cell.alpha = 0
+        UIView.animate(withDuration: 0.75) {
+            cell.layer.transform = CATransform3DIdentity
+            cell.alpha = 1
+        }
     }
 }
 

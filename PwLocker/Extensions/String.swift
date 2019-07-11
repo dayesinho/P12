@@ -36,5 +36,13 @@ extension String {
         guard let first = first else { return "" }
         return String(first).uppercased() + dropFirst()
     }
+    
+    var removeLastTenCharacters: String {
+        return String(self.dropLast(10))
+    }
+    
+    var removeFirstFourCharacters: String {
+        return String(self.dropFirst(4))
+    }
 }
 

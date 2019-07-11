@@ -18,26 +18,10 @@ class NewsTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-//    var breachNews: BreachModel! {
-//        didSet {
-//            
-//            titleLabel.text = breachNews.name
-//            publishDateLabel.text = "Posted: " + breachNews.addedDate.asString(style: .long)
-//            descriptionTextView.text = breachNews.description.html2AttributedString
-//            // to add: "Accounts pwned:" + String(breachNews.pwnCount)
-//            guard let imageURL = URL(string: breachNews.logoPath) else { return }
-//            if let imageFromURL = try? Data(contentsOf: imageURL) {
-//                newsImageView.image = UIImage(data: imageFromURL)
-//            } else {
-//                newsImageView.image = UIImage(named: "key")
-//            }
-//        }
-//    }
-    
     var item: RSSItem! {
         didSet {
             titleLabel.text = item.title
-            publishDateLabel.text = item.pubDate
+            publishDateLabel.text = "Posted: " + item.pubDate.removeLastTenCharacters.removeFirstFourCharacters
             descriptionTextView.text = item.description.html2AttributedString
         }
     }

@@ -30,8 +30,6 @@
 		019F6DCC22C6EE2900A05C68 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F6DCB22C6EE2900A05C68 /* String.swift */; };
 		019F6DCE22C718F900A05C68 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F6DCD22C718F900A05C68 /* NewsViewController.swift */; };
 		01CCFEF722C94F48005509E4 /* PasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CCFEF622C94F48005509E4 /* PasswordService.swift */; };
-		01CCFEF922C952B0005509E4 /* BreachNewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CCFEF822C952B0005509E4 /* BreachNewsService.swift */; };
-		01CCFEFB22C95446005509E4 /* BreachModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CCFEFA22C95446005509E4 /* BreachModel.swift */; };
 		01CCFF0222C95A40005509E4 /* EmailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CCFF0122C95A40005509E4 /* EmailService.swift */; };
 		01CCFF0422C95B5E005509E4 /* EmailBreachModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CCFF0322C95B5E005509E4 /* EmailBreachModel.swift */; };
 		01E69C6922D409BD00D48542 /* WebsiteObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E69C6822D409BD00D48542 /* WebsiteObject.swift */; };
@@ -78,8 +76,6 @@
 		019F6DCB22C6EE2900A05C68 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		019F6DCD22C718F900A05C68 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		01CCFEF622C94F48005509E4 /* PasswordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordService.swift; sourceTree = "<group>"; };
-		01CCFEF822C952B0005509E4 /* BreachNewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreachNewsService.swift; sourceTree = "<group>"; };
-		01CCFEFA22C95446005509E4 /* BreachModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreachModel.swift; sourceTree = "<group>"; };
 		01CCFF0122C95A40005509E4 /* EmailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailService.swift; sourceTree = "<group>"; };
 		01CCFF0322C95B5E005509E4 /* EmailBreachModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailBreachModel.swift; sourceTree = "<group>"; };
 		01E69C6822D409BD00D48542 /* WebsiteObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteObject.swift; sourceTree = "<group>"; };
@@ -239,8 +235,6 @@
 		01CCFF0022C9563B005509E4 /* News */ = {
 			isa = PBXGroup;
 			children = (
-				01CCFEF822C952B0005509E4 /* BreachNewsService.swift */,
-				01CCFEFA22C95446005509E4 /* BreachModel.swift */,
 				01182EA222D25C5B001B9953 /* XMLParser.swift */,
 			);
 			path = News;
@@ -402,7 +396,6 @@
 				01FE216B22C46D2500BEA529 /* EmailViewController.swift in Sources */,
 				01182EA922D2D467001B9953 /* NotesViewController.swift in Sources */,
 				01F0D97E22D0B0C9005339AC /* ActivityIndicator.swift in Sources */,
-				01CCFEFB22C95446005509E4 /* BreachModel.swift in Sources */,
 				01E69C6922D409BD00D48542 /* WebsiteObject.swift in Sources */,
 				01F0D97C22CF6B2A005339AC /* PINCodeViewController.swift in Sources */,
 				01143A8822D11E180022AA79 /* UIView.swift in Sources */,
@@ -411,7 +404,6 @@
 				01E69C6D22D42CE600D48542 /* DetailNoteViewController.swift in Sources */,
 				01182EA122D20B57001B9953 /* Array.swift in Sources */,
 				01182F0D22D40853001B9953 /* NoteTableViewCell.swift in Sources */,
-				01CCFEF922C952B0005509E4 /* BreachNewsService.swift in Sources */,
 				019F6DCA22C6DD6800A05C68 /* WebsiteTableViewCell.swift in Sources */,
 				01FE216322C2E57200BEA529 /* GeneratorViewController.swift in Sources */,
 				01FE217022C4824500BEA529 /* TextField.swift in Sources */,

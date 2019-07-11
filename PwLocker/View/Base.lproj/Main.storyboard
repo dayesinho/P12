@@ -227,120 +227,181 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="645"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="QKU-Tb-Xkj">
-                                <rect key="frame" x="20" y="64" width="374" height="487"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4zo-ZN-GOF">
+                                <rect key="frame" x="20" y="64" width="374" height="407"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNM-JP-CQT">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="29"/>
-                                        <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="21"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Adk-GN-pbE">
-                                        <rect key="frame" x="0.0" y="51" width="374" height="29"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                <integer key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbd-96-0oZ">
-                                        <rect key="frame" x="0.0" y="102" width="374" height="28.5"/>
-                                        <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="21"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cHm-eW-Usu">
-                                        <rect key="frame" x="0.0" y="152.5" width="374" height="29"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                <integer key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LI3-TT-TRl">
-                                        <rect key="frame" x="0.0" y="203.5" width="374" height="29"/>
-                                        <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="21"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cnp-Yv-2Pa">
-                                        <rect key="frame" x="0.0" y="254.5" width="374" height="29"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                <integer key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaq-EE-nlz">
-                                        <rect key="frame" x="0.0" y="305.5" width="374" height="29"/>
-                                        <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="21"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dH5-ZA-nQD">
-                                        <rect key="frame" x="0.0" y="356.5" width="374" height="28.5"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                <integer key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7x-Rc-e6u">
-                                        <rect key="frame" x="0.0" y="407" width="374" height="29"/>
-                                        <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="21"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KCY-Hr-cUF">
-                                        <rect key="frame" x="0.0" y="458" width="374" height="29"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                <integer key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="r0j-B4-dhu" userLabel="Email Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="77.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9C0-Qr-fc4">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="38.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNM-JP-CQT">
+                                                        <rect key="frame" x="0.0" y="0.0" width="119.5" height="38.5"/>
+                                                        <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="21"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wVE-OO-pwC">
+                                                        <rect key="frame" x="127.5" y="0.0" width="119" height="38.5"/>
+                                                        <color key="backgroundColor" red="0.15518405569999999" green="0.15518405569999999" blue="0.15518405569999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cei-qX-oBe">
+                                                        <rect key="frame" x="254.5" y="0.0" width="119.5" height="38.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDb-PS-zdN">
+                                                                <rect key="frame" x="15" y="6" width="89.5" height="26.5"/>
+                                                                <color key="backgroundColor" red="0.1980436444" green="0.74697035550000002" blue="0.38535201549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <state key="normal" title="Copy">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.15518405569999999" green="0.15518405569999999" blue="0.15518405569999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="uDb-PS-zdN" secondAttribute="bottom" constant="6" id="0ue-wf-24Q"/>
+                                                            <constraint firstItem="uDb-PS-zdN" firstAttribute="leading" secondItem="cei-qX-oBe" secondAttribute="leading" constant="15" id="6Qy-5k-6Is"/>
+                                                            <constraint firstAttribute="trailing" secondItem="uDb-PS-zdN" secondAttribute="trailing" constant="15" id="fPl-6M-cSP"/>
+                                                            <constraint firstItem="uDb-PS-zdN" firstAttribute="top" secondItem="cei-qX-oBe" secondAttribute="top" constant="6" id="n24-cM-VH1"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Adk-GN-pbE">
+                                                <rect key="frame" x="0.0" y="38.5" width="374" height="39"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uIX-db-hdk" userLabel="Login Stack View">
+                                        <rect key="frame" x="0.0" y="82.5" width="374" height="77.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbd-96-0oZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="38.5"/>
+                                                <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="21"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cHm-eW-Usu">
+                                                <rect key="frame" x="0.0" y="38.5" width="374" height="39"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nEB-BD-oFR" userLabel="Password Stack View">
+                                        <rect key="frame" x="0.0" y="165" width="374" height="77"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LI3-TT-TRl">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="38.5"/>
+                                                <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="21"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cnp-Yv-2Pa">
+                                                <rect key="frame" x="0.0" y="38.5" width="374" height="38.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yB6-jY-Q65" userLabel="Website Stack View">
+                                        <rect key="frame" x="0.0" y="247" width="374" height="77.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaq-EE-nlz">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="39"/>
+                                                <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="21"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dH5-ZA-nQD">
+                                                <rect key="frame" x="0.0" y="39" width="374" height="38.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pLp-lg-7Lr" userLabel="Name Stack View">
+                                        <rect key="frame" x="0.0" y="329.5" width="374" height="77.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7x-Rc-e6u">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="39"/>
+                                                <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="21"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KCY-Hr-cUF">
+                                                <rect key="frame" x="0.0" y="39" width="374" height="38.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="yB6-jY-Q65" secondAttribute="trailing" id="Oip-W0-cUY"/>
+                                    <constraint firstAttribute="trailing" secondItem="uIX-db-hdk" secondAttribute="trailing" id="c23-mZ-QSJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="nEB-BD-oFR" secondAttribute="trailing" id="cDE-SR-JS4"/>
+                                    <constraint firstAttribute="trailing" secondItem="r0j-B4-dhu" secondAttribute="trailing" id="flc-h4-ufv"/>
+                                    <constraint firstAttribute="trailing" secondItem="pLp-lg-7Lr" secondAttribute="trailing" id="jqP-h8-NTh"/>
+                                    <constraint firstItem="uIX-db-hdk" firstAttribute="leading" secondItem="4zo-ZN-GOF" secondAttribute="leading" id="muk-dc-I7l"/>
+                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="X6O-va-xzv">
                                 <rect key="frame" x="50" y="571" width="314" height="40"/>
@@ -383,12 +444,12 @@
                         </subviews>
                         <color key="backgroundColor" red="0.15518405569999999" green="0.15518405569999999" blue="0.15518405569999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="X6O-va-xzv" firstAttribute="top" secondItem="QKU-Tb-Xkj" secondAttribute="bottom" constant="20" id="2V4-NR-bmA"/>
+                            <constraint firstItem="4zo-ZN-GOF" firstAttribute="top" secondItem="rcq-R9-hOt" secondAttribute="top" constant="20" id="01c-Vc-eNm"/>
                             <constraint firstItem="X6O-va-xzv" firstAttribute="bottom" secondItem="rcq-R9-hOt" secondAttribute="bottom" id="9j4-vy-hR1"/>
-                            <constraint firstItem="QKU-Tb-Xkj" firstAttribute="leading" secondItem="rcq-R9-hOt" secondAttribute="leading" constant="20" id="AA9-EV-nuP"/>
-                            <constraint firstItem="QKU-Tb-Xkj" firstAttribute="top" secondItem="rcq-R9-hOt" secondAttribute="top" constant="20" id="BoG-aK-ZhU"/>
-                            <constraint firstItem="rcq-R9-hOt" firstAttribute="trailing" secondItem="QKU-Tb-Xkj" secondAttribute="trailing" constant="20" id="LUt-Vd-61T"/>
+                            <constraint firstItem="4zo-ZN-GOF" firstAttribute="leading" secondItem="rcq-R9-hOt" secondAttribute="leading" constant="20" id="MJv-M1-ACi"/>
                             <constraint firstItem="X6O-va-xzv" firstAttribute="leading" secondItem="rcq-R9-hOt" secondAttribute="leading" constant="50" id="X1V-E5-KDY"/>
+                            <constraint firstItem="rcq-R9-hOt" firstAttribute="trailing" secondItem="4zo-ZN-GOF" secondAttribute="trailing" constant="20" id="dEq-8n-T0M"/>
+                            <constraint firstItem="X6O-va-xzv" firstAttribute="top" secondItem="4zo-ZN-GOF" secondAttribute="bottom" constant="100" id="gbh-UM-pQh"/>
                             <constraint firstItem="rcq-R9-hOt" firstAttribute="trailing" secondItem="X6O-va-xzv" secondAttribute="trailing" constant="50" id="lLc-Jy-FYS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rcq-R9-hOt"/>
@@ -414,7 +475,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ix2-eq-EvR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1471" y="1927"/>
+            <point key="canvasLocation" x="-1471.0144927536232" y="1926.8973214285713"/>
         </scene>
         <!--Detail Note View Controller-->
         <scene sceneID="rrM-Xt-1Kr">
@@ -471,20 +532,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qbX-xu-Qbz">
-                                <rect key="frame" x="40" y="104" width="334" height="638"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Uzy-vw-qMH">
+                                <rect key="frame" x="20" y="64" width="374" height="678"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Uzy-vw-qMH">
-                                        <rect key="frame" x="15" y="15" width="304" height="593"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="R3Y-0e-Yb2">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="118"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilM-5J-DKU">
-                                                <rect key="frame" x="0.0" y="0.0" width="304" height="39.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="55"/>
                                                 <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="21"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N1Y-MF-M7s">
-                                                <rect key="frame" x="0.0" y="61.5" width="304" height="39.5"/>
+                                                <rect key="frame" x="0.0" y="63" width="374" height="55"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -500,14 +561,19 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KPO-sr-yc4">
+                                        <rect key="frame" x="0.0" y="140" width="374" height="118"/>
+                                        <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5U-kR-l6y">
-                                                <rect key="frame" x="0.0" y="123" width="304" height="39.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="55"/>
                                                 <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="21"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RzZ-7Z-bez">
-                                                <rect key="frame" x="0.0" y="184.5" width="304" height="39.5"/>
+                                                <rect key="frame" x="0.0" y="63" width="374" height="55"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -522,14 +588,19 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3vB-DU-BNS">
+                                        <rect key="frame" x="0.0" y="280" width="374" height="118"/>
+                                        <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYg-6M-s2H">
-                                                <rect key="frame" x="0.0" y="246" width="304" height="39.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="55"/>
                                                 <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="21"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LJW-tv-jVL">
-                                                <rect key="frame" x="0.0" y="307.5" width="304" height="39.5"/>
+                                                <rect key="frame" x="0.0" y="63" width="374" height="55"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -544,14 +615,19 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UcN-gS-ffW">
-                                                <rect key="frame" x="0.0" y="369" width="304" height="39.5"/>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iSH-GW-Pkt">
+                                        <rect key="frame" x="0.0" y="420" width="374" height="118"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UcN-gS-ffW">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="55"/>
                                                 <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="21"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vMl-my-rxm">
-                                                <rect key="frame" x="0.0" y="430.5" width="304" height="39.5"/>
+                                                <rect key="frame" x="0.0" y="63" width="374" height="55"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -566,14 +642,19 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2n-gQ-SN5">
-                                                <rect key="frame" x="0.0" y="492" width="304" height="39.5"/>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="IBr-ME-UMf">
+                                        <rect key="frame" x="0.0" y="560" width="374" height="118"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2n-gQ-SN5">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="55"/>
                                                 <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="21"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hS5-Kr-jOq">
-                                                <rect key="frame" x="0.0" y="553.5" width="304" height="39.5"/>
+                                                <rect key="frame" x="0.0" y="63" width="374" height="55"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -591,25 +672,9 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="Uzy-vw-qMH" firstAttribute="leading" secondItem="qbX-xu-Qbz" secondAttribute="leading" constant="15" id="B8P-wp-fdr"/>
-                                    <constraint firstItem="Uzy-vw-qMH" firstAttribute="top" secondItem="qbX-xu-Qbz" secondAttribute="top" constant="15" id="HOh-bn-kMz"/>
-                                    <constraint firstAttribute="bottom" secondItem="Uzy-vw-qMH" secondAttribute="bottom" constant="30" id="iYi-ag-eF3"/>
-                                    <constraint firstAttribute="trailing" secondItem="Uzy-vw-qMH" secondAttribute="trailing" constant="15" id="uyY-PU-sJY"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="M9n-1j-cdE">
-                                <rect key="frame" x="60" y="762" width="294" height="50"/>
+                                <rect key="frame" x="60" y="792" width="294" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3a-Af-PxM">
                                         <rect key="frame" x="0.0" y="0.0" width="107" height="50"/>
@@ -657,13 +722,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.15518405569999999" green="0.15518405569999999" blue="0.15518405569999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="WiM-gK-NKt" firstAttribute="bottom" secondItem="qbX-xu-Qbz" secondAttribute="bottom" constant="120" id="0de-pt-yJR"/>
-                            <constraint firstItem="qbX-xu-Qbz" firstAttribute="leading" secondItem="WiM-gK-NKt" secondAttribute="leading" constant="40" id="3lD-4T-LBH"/>
                             <constraint firstItem="WiM-gK-NKt" firstAttribute="trailing" secondItem="M9n-1j-cdE" secondAttribute="trailing" constant="60" id="3ue-mF-Aez"/>
-                            <constraint firstItem="M9n-1j-cdE" firstAttribute="centerY" secondItem="qbX-xu-Qbz" secondAttribute="bottom" constant="45" id="Uc8-kl-92V"/>
-                            <constraint firstItem="qbX-xu-Qbz" firstAttribute="top" secondItem="WiM-gK-NKt" secondAttribute="top" constant="60" id="a5D-BF-w06"/>
+                            <constraint firstItem="WiM-gK-NKt" firstAttribute="trailing" secondItem="Uzy-vw-qMH" secondAttribute="trailing" constant="20" id="7VH-Wr-zWy"/>
+                            <constraint firstItem="Uzy-vw-qMH" firstAttribute="top" secondItem="WiM-gK-NKt" secondAttribute="top" constant="20" id="Clw-Zd-U9B"/>
                             <constraint firstItem="M9n-1j-cdE" firstAttribute="leading" secondItem="WiM-gK-NKt" secondAttribute="leading" constant="60" id="ein-Ad-pVy"/>
-                            <constraint firstItem="WiM-gK-NKt" firstAttribute="trailing" secondItem="qbX-xu-Qbz" secondAttribute="trailing" constant="40" id="tN4-bL-4Xm"/>
+                            <constraint firstItem="WiM-gK-NKt" firstAttribute="bottom" secondItem="M9n-1j-cdE" secondAttribute="bottom" constant="20" id="gJ7-Rw-7Ay"/>
+                            <constraint firstItem="M9n-1j-cdE" firstAttribute="top" secondItem="Uzy-vw-qMH" secondAttribute="bottom" constant="50" id="l9U-dJ-oYl"/>
+                            <constraint firstItem="Uzy-vw-qMH" firstAttribute="leading" secondItem="WiM-gK-NKt" secondAttribute="leading" constant="20" id="r9c-eh-Q0y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WiM-gK-NKt"/>
                     </view>
@@ -736,7 +801,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="23" minValue="6" maxValue="40" translatesAutoresizingMaskIntoConstraints="NO" id="HzE-Pf-T1P">
-                                <rect key="frame" x="58" y="147.5" width="287" height="31"/>
+                                <rect key="frame" x="58" y="147.5" width="296.5" height="31"/>
                                 <color key="tintColor" red="0.1980436444" green="0.74697035550000002" blue="0.38535201549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="usc-bj-6M7"/>
@@ -774,7 +839,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cac-ec-aBg">
-                                <rect key="frame" x="363" y="150" width="39" height="25"/>
+                                <rect key="frame" x="372.5" y="150" width="29.5" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="aRg-QY-Seq"/>
                                 </constraints>
@@ -1057,7 +1122,7 @@
         <!--Settings-->
         <scene sceneID="f3D-K1-Rvn">
             <objects>
-                <viewController id="23I-GT-rH4" customClass="SettingsViewController" sceneMemberID="viewController">
+                <viewController id="23I-GT-rH4" customClass="SettingsViewController" customModule="PwLocker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ndQ-Us-mp8" customClass="Settings">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1216,7 +1281,7 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Special thank to HaveIBeenPwned.com to provide a free database an services" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UsE-7Y-qnf">
                                 <rect key="frame" x="20" y="20" width="374" height="685"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.15518405569999999" green="0.15518405569999999" blue="0.15518405569999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1276,27 +1341,27 @@
                                                     <rect key="frame" x="5" y="5" width="404" height="190"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gZ3-aQ-hcX">
-                                                            <rect key="frame" x="15" y="15" width="374" height="57.5"/>
+                                                            <rect key="frame" x="15" y="15" width="374" height="61.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmY-P6-9lB">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="27.5"/>
-                                                                    <fontDescription key="fontDescription" name="GemunuLibre-SemiBold" family="Gemunu Libre" pointSize="25"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                                                    <fontDescription key="fontDescription" name="GemunuLibre-SemiBold" family="Gemunu Libre" pointSize="27"/>
                                                                     <color key="textColor" red="0.1980436444" green="0.74697035550000002" blue="0.38535201549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duI-jA-p1g">
-                                                                    <rect key="frame" x="0.0" y="35.5" width="374" height="22"/>
-                                                                    <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="20"/>
+                                                                    <rect key="frame" x="0.0" y="38" width="374" height="23.5"/>
+                                                                    <fontDescription key="fontDescription" name="GemunuLibre-SemiBold" family="Gemunu Libre" pointSize="21"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pHX-jo-L84">
-                                                            <rect key="frame" x="15" y="77.5" width="374" height="108.5"/>
+                                                            <rect key="frame" x="15" y="81.5" width="374" height="104.5"/>
                                                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="19"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                             <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                                         </textView>
@@ -1768,38 +1833,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yqN-5n-Bpz">
-                                <rect key="frame" x="20" y="124" width="374" height="658"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="black" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yqN-5n-Bpz">
+                                <rect key="frame" x="20" y="204" width="374" height="573"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter a title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q8L-jG-QWp">
                                 <rect key="frame" x="78" y="64" width="316" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="textColor"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="D2r-FV-c5w"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="Eaq-84-2eM">
-                                <rect key="frame" x="70" y="802" width="274" height="40"/>
+                                <rect key="frame" x="50" y="802" width="314" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbT-mm-wz6">
-                                        <rect key="frame" x="0.0" y="0.0" width="87" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="107" height="40"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="GemunuLibre-SemiBold" family="Gemunu Libre" pointSize="22"/>
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="cancelButtonPressed:" destination="KSh-I9-wzc" eventType="touchUpInside" id="lNt-AM-Wsg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuG-Lf-aoW">
-                                        <rect key="frame" x="187" y="0.0" width="87" height="40"/>
+                                        <rect key="frame" x="207" y="0.0" width="107" height="40"/>
                                         <color key="backgroundColor" red="0.1980436444" green="0.74697035550000002" blue="0.38535201549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="GemunuLibre-SemiBold" family="Gemunu Libre" pointSize="22"/>
                                         <state key="normal" title="Save">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="saveButtonPressed:" destination="KSh-I9-wzc" eventType="touchUpInside" id="drH-eZ-gsf"/>
                                         </connections>
@@ -1808,26 +1908,38 @@
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Blw-TV-AAo">
                                 <rect key="frame" x="20" y="64" width="38" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Locker:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnd-sj-a7e">
+                                <rect key="frame" x="20" y="134" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fuZ-yI-uef"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GemunuLibre-Medium" family="Gemunu Libre" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.15518405569999999" green="0.15518405569999999" blue="0.15518405569999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="yqN-5n-Bpz" firstAttribute="top" secondItem="Q8L-jG-QWp" secondAttribute="bottom" constant="20" id="0BD-md-yLR"/>
-                            <constraint firstItem="Eaq-84-2eM" firstAttribute="top" secondItem="yqN-5n-Bpz" secondAttribute="bottom" constant="20" id="28O-ut-F2z"/>
-                            <constraint firstItem="yqN-5n-Bpz" firstAttribute="top" secondItem="Blw-TV-AAo" secondAttribute="bottom" constant="20" id="6kv-9b-FYL"/>
-                            <constraint firstItem="Eaq-84-2eM" firstAttribute="leading" secondItem="qxa-c2-rH5" secondAttribute="leading" constant="70" id="9V9-DK-bOz"/>
+                            <constraint firstItem="yqN-5n-Bpz" firstAttribute="top" secondItem="Q8L-jG-QWp" secondAttribute="bottom" constant="100" id="0BD-md-yLR"/>
+                            <constraint firstItem="Eaq-84-2eM" firstAttribute="top" secondItem="yqN-5n-Bpz" secondAttribute="bottom" constant="25" id="28O-ut-F2z"/>
+                            <constraint firstItem="yqN-5n-Bpz" firstAttribute="top" secondItem="Blw-TV-AAo" secondAttribute="bottom" constant="100" id="6kv-9b-FYL"/>
+                            <constraint firstItem="Eaq-84-2eM" firstAttribute="leading" secondItem="qxa-c2-rH5" secondAttribute="leading" constant="50" id="9V9-DK-bOz"/>
+                            <constraint firstItem="bnd-sj-a7e" firstAttribute="leading" secondItem="qxa-c2-rH5" secondAttribute="leading" constant="20" id="Eeg-3V-ePK"/>
+                            <constraint firstItem="bnd-sj-a7e" firstAttribute="trailing" secondItem="Q8L-jG-QWp" secondAttribute="trailing" id="ExG-zN-8UR"/>
                             <constraint firstItem="Blw-TV-AAo" firstAttribute="top" secondItem="qxa-c2-rH5" secondAttribute="top" constant="20" id="GR3-A9-RLl"/>
                             <constraint firstItem="qxa-c2-rH5" firstAttribute="trailing" secondItem="Q8L-jG-QWp" secondAttribute="trailing" constant="20" id="JAE-uf-kvD"/>
+                            <constraint firstItem="bnd-sj-a7e" firstAttribute="top" secondItem="Q8L-jG-QWp" secondAttribute="bottom" constant="30" id="YbY-zR-LcA"/>
                             <constraint firstItem="qxa-c2-rH5" firstAttribute="trailing" secondItem="yqN-5n-Bpz" secondAttribute="trailing" constant="20" id="bN5-81-FII"/>
-                            <constraint firstItem="qxa-c2-rH5" firstAttribute="trailing" secondItem="Eaq-84-2eM" secondAttribute="trailing" constant="70" id="c4l-6B-ntJ"/>
+                            <constraint firstItem="qxa-c2-rH5" firstAttribute="trailing" secondItem="Eaq-84-2eM" secondAttribute="trailing" constant="50" id="c4l-6B-ntJ"/>
                             <constraint firstItem="Q8L-jG-QWp" firstAttribute="top" secondItem="qxa-c2-rH5" secondAttribute="top" constant="20" id="cRS-Pc-Pd0"/>
                             <constraint firstItem="Q8L-jG-QWp" firstAttribute="leading" secondItem="Blw-TV-AAo" secondAttribute="trailing" constant="20" id="eEy-Tf-0zl"/>
-                            <constraint firstItem="yqN-5n-Bpz" firstAttribute="top" secondItem="qxa-c2-rH5" secondAttribute="top" constant="80" id="hzS-yq-AgV"/>
+                            <constraint firstItem="yqN-5n-Bpz" firstAttribute="top" secondItem="qxa-c2-rH5" secondAttribute="top" constant="160" id="hzS-yq-AgV"/>
                             <constraint firstItem="yqN-5n-Bpz" firstAttribute="leading" secondItem="qxa-c2-rH5" secondAttribute="leading" constant="20" id="odS-h3-XL9"/>
-                            <constraint firstItem="qxa-c2-rH5" firstAttribute="bottom" secondItem="yqN-5n-Bpz" secondAttribute="bottom" constant="80" id="t3J-B4-6jV"/>
+                            <constraint firstItem="qxa-c2-rH5" firstAttribute="bottom" secondItem="yqN-5n-Bpz" secondAttribute="bottom" constant="85" id="t3J-B4-6jV"/>
                             <constraint firstItem="qxa-c2-rH5" firstAttribute="bottom" secondItem="Eaq-84-2eM" secondAttribute="bottom" constant="20" id="t6n-Bj-XmE"/>
                             <constraint firstItem="Blw-TV-AAo" firstAttribute="leading" secondItem="qxa-c2-rH5" secondAttribute="leading" constant="20" id="tLV-ca-FUe"/>
                         </constraints>
@@ -1840,7 +1952,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n2G-lE-sva" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2113" y="747"/>
+            <point key="canvasLocation" x="-2113.0434782608695" y="746.65178571428567"/>
         </scene>
         <!--Websites View Controller-->
         <scene sceneID="5bC-9W-6ya">
@@ -1867,6 +1979,7 @@
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nGt-11-dgD">
                                                             <rect key="frame" x="6" y="6" width="58" height="58"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="nGt-11-dgD" secondAttribute="height" multiplier="1:1" id="k8z-Gb-x2p"/>
                                                             </constraints>

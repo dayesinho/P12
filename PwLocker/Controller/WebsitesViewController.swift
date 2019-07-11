@@ -47,7 +47,8 @@ extension WebsitesViewController: UITableViewDataSource {
         let websiteArray = realm?.objects(WebsiteObject.self)
         let previewWebsiteData = websiteArray?[indexPath.row]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "WebsiteCell", for: indexPath) as! WebsiteTableViewCell
+         let cell = tableView.dequeueReusableCell(withIdentifier: "WebsiteCell", for: indexPath) as! WebsiteTableViewCell
+        
         cell.selectionStyle = .none
         cell.websiteCell = previewWebsiteData
         return cell
