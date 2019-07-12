@@ -21,7 +21,7 @@ class NewsTableViewCell: UITableViewCell {
     var item: RSSItem! {
         didSet {
             titleLabel.text = item.title
-            publishDateLabel.text = "Posted: " + item.pubDate.removeLastTenCharacters.removeFirstFourCharacters
+            publishDateLabel.text = "Posted on: " + item.pubDate.removeLastTenCharacters.removeFirstFourCharacters
             descriptionTextView.text = item.description.html2AttributedString
         }
     }
