@@ -25,6 +25,7 @@ class LockerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.setHidesBackButton(true, animated: false)
         notesView.alpha = 0
         effect = visualEffectView.effect
         visualEffectView.effect = nil
@@ -57,7 +58,7 @@ class LockerViewController: UIViewController {
     }
     
     fileprivate func setSegmentControl() {
-        let titles = ["Websites/Apps", "Notes"]
+        let titles = ["Websites", "Notes"]
         let frame = CGRect(x: 5, y: 20, width: view.frame.width - 10, height: 40)
         let segmentedControl = TwicketSegmentedControl(frame: frame)
         segmentedControl.setSegmentItems(titles)

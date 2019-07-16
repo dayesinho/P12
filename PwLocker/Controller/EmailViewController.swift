@@ -20,7 +20,7 @@ class EmailViewController: UIViewController {
         emailAddressTextField.roundCorners(corners: [.topLeft, .bottomLeft], radius: 20)
         searchButton.roundCorners(corners: [.topRight, .bottomRight], radius: 20)
     }
-        
+    
     @IBOutlet weak var emailBreachTableView: UITableView!
     @IBOutlet weak var emailAddressTextField: UITextField! {
         didSet {
@@ -28,41 +28,23 @@ class EmailViewController: UIViewController {
             emailAddressTextField.setIcon(#imageLiteral(resourceName: "email"))
         }
     }
-    @IBOutlet weak var resultView: UIView!
-    @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var searchButton: UIButton!
-    
+    @IBOutlet weak var noPwnageView: UIView!
     
     @IBAction func validationButton(_ sender: UIButton) {
-     
+        noPwnageView.alpha = 0
+        
         guard let account = emailAddressTextField.text else { return }
         
         emailService.getEmailBreach(account: account) { (success, emailBreach) in
             if success, let emailBreach = emailBreach {
                 self.emailBreach = emailBreach
+                self.emailBreachTableView.isHidden = false
                 self.emailBreachTableView.reloadData()
-                self.pwnedPresentation(pwnedNumber: emailBreach.count)
             } else {
-                self.emailBreach = emailBreach
-                self.emailBreachTableView.reloadData()
-                self.notPwnedPresentation()
+                self.noPwnageView.alpha = 1
+                self.emailBreachTableView.isHidden = true
             }
-        }
-    }
-    
-    func pwnedPresentation(pwnedNumber: Int) {
-        DispatchQueue.main.async {
-            self.resultView.layer.borderWidth = 2
-            self.resultView.backgroundColor = self.red
-            self.resultLabel.text = "Pwned on \(pwnedNumber) breached sites"
-        }
-    }
-    
-    func notPwnedPresentation() {
-        DispatchQueue.main.async {
-            self.resultView.layer.borderWidth = 2
-            self.resultView.backgroundColor = self.green
-            self.resultLabel.text = "Good news — No pwnage found!"
         }
     }
     
@@ -72,6 +54,7 @@ class EmailViewController: UIViewController {
 }
 
 extension EmailViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let emailBreacheUnwrap = emailBreach else { return 0 }
         return emailBreacheUnwrap.count
@@ -85,11 +68,27 @@ extension EmailViewController: UITableViewDataSource {
         cell.emailPwned = emailData
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EmailHeaderCell") as! HeaderEmailTableViewCell
+        
+        guard let pwndNumber = emailBreach?.count else { return nil }
+        
+        cell.headerLabel.text = "Pwned on \(pwndNumber) breached sites"
+        cell.headerView.backgroundColor = red
+        
+        return cell
+    }
 }
+
 
 extension EmailViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 210
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 80
     }
 }

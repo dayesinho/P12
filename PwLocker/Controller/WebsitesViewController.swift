@@ -27,8 +27,8 @@ class WebsitesViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let detailsViewController = segue.destination as? DetailWebsiteViewController {
-            detailsViewController.websiteObject = websiteObject
+        if let detailWebsiteViewController = segue.destination as? DetailWebsiteTableViewController {
+            detailWebsiteViewController.websiteObject = websiteObject
         }
     }
 }
@@ -66,6 +66,6 @@ extension WebsitesViewController: UITableViewDataSource {
 extension WebsitesViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 70
     }
 }

@@ -36,7 +36,7 @@ class SaveNoteViewController: UIViewController {
         view.endEditing(true)
     }
     
-    @IBAction func saveButtonPressed(_ sender: UIButton) {
+    @IBAction func saveButtonTapped(_ sender: Any) {
         
         noteObject.noteTitle = noteTitleTextField.text
         noteObject.noteContent = noteTextView.text
@@ -48,13 +48,15 @@ class SaveNoteViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func cancelButtonPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+    
+    @IBAction func cancelButtonTapped(_ sender: Any) {
+        
+         dismiss(animated: true, completion: nil)
     }
     
     fileprivate func setSegmentControl() {
         let titles = ["On", "Off"]
-        let frame = CGRect(x: 78, y: 134, width: 160, height: 40)
+        let frame = CGRect(x: 78, y: 99, width: 160, height: 40)
         let segmentedControl = TwicketSegmentedControl(frame: frame)
         segmentedControl.setSegmentItems(titles)
         segmentedControl.font = UIFont(name: "Gemunu Libre", size: 18)!
