@@ -41,6 +41,10 @@ extension String {
         return String(self.dropLast(10))
     }
     
+    var removeLastCharacter: String {
+        return String(self.dropLast(1))
+    }
+    
     var removeFirstFourCharacters: String {
         return String(self.dropFirst(4))
     }

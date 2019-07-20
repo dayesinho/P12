@@ -20,15 +20,14 @@
 		0119784022DA3EF5003BE37D /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0119783F22DA3EF5003BE37D /* SettingsTableViewCell.swift */; };
 		0119784222DA635D003BE37D /* DeleteAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0119784122DA635D003BE37D /* DeleteAllViewController.swift */; };
 		0119784422DA9EC2003BE37D /* HeaderSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0119784322DA9EC2003BE37D /* HeaderSettingTableViewCell.swift */; };
-		011FA7F122DBB58B00A347A4 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011FA7F022DBB58B00A347A4 /* SignInViewController.swift */; };
-		011FA7F322DBBF4B00A347A4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011FA7F222DBBF4B00A347A4 /* RegisterViewController.swift */; };
-		011FA7F522DBDFD600A347A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 011FA7F422DBDFD600A347A4 /* GoogleService-Info.plist */; };
-		011FA7F922DBEDDA00A347A4 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011FA7F822DBEDDA00A347A4 /* UIApplication.swift */; };
 		014F5B0E22C9A66A00F03EA3 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F5B0D22C9A66A00F03EA3 /* NewsTableViewCell.swift */; };
 		014F5B1022CAB7E000F03EA3 /* EmailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F5B0F22CAB7E000F03EA3 /* EmailTableViewCell.swift */; };
 		014F5B1222CAC20200F03EA3 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F5B1122CAC20200F03EA3 /* Alerts.swift */; };
 		014F5B1422CC019100F03EA3 /* RangeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F5B1322CC019100F03EA3 /* RangeModel.swift */; };
 		014F5B1622CC2AAA00F03EA3 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F5B1522CC2AAA00F03EA3 /* NumberFormatter.swift */; };
+		01515C1822DE90C200811E7F /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01515C1722DE90C200811E7F /* TextView.swift */; };
+		01515C1A22DF855300811E7F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01515C1922DF855300811E7F /* LoginViewController.swift */; };
+		01515C2422E0BB6400811E7F /* RealmEncryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01515C2322E0BB6400811E7F /* RealmEncryption.swift */; };
 		0158B65D22C2293F00BE425E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0158B65C22C2293F00BE425E /* AppDelegate.swift */; };
 		0158B66222C2293F00BE425E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0158B66022C2293F00BE425E /* Main.storyboard */; };
 		0158B66422C2293F00BE425E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0158B66322C2293F00BE425E /* Assets.xcassets */; };
@@ -73,15 +72,14 @@
 		0119783F22DA3EF5003BE37D /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		0119784122DA635D003BE37D /* DeleteAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAllViewController.swift; sourceTree = "<group>"; };
 		0119784322DA9EC2003BE37D /* HeaderSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSettingTableViewCell.swift; sourceTree = "<group>"; };
-		011FA7F022DBB58B00A347A4 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		011FA7F222DBBF4B00A347A4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		011FA7F422DBDFD600A347A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		011FA7F822DBEDDA00A347A4 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		014F5B0D22C9A66A00F03EA3 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		014F5B0F22CAB7E000F03EA3 /* EmailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTableViewCell.swift; sourceTree = "<group>"; };
 		014F5B1122CAC20200F03EA3 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		014F5B1322CC019100F03EA3 /* RangeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeModel.swift; sourceTree = "<group>"; };
 		014F5B1522CC2AAA00F03EA3 /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
+		01515C1722DE90C200811E7F /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		01515C1922DF855300811E7F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		01515C2322E0BB6400811E7F /* RealmEncryption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmEncryption.swift; sourceTree = "<group>"; };
 		0158B65922C2293F00BE425E /* PwLocker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PwLocker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0158B65C22C2293F00BE425E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0158B66122C2293F00BE425E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -170,8 +168,7 @@
 		0158B66E22C22ACB00BE425E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				011FA7F022DBB58B00A347A4 /* SignInViewController.swift */,
-				011FA7F222DBBF4B00A347A4 /* RegisterViewController.swift */,
+				01515C1922DF855300811E7F /* LoginViewController.swift */,
 				01FE216022C2E54F00BEA529 /* LockerViewController.swift */,
 				01182EA622D2D41B001B9953 /* WebsitesViewController.swift */,
 				0113187A22DCEC110049A887 /* DetailWebsiteTableViewController.swift */,
@@ -210,8 +207,9 @@
 			isa = PBXGroup;
 			children = (
 				01182F0E22D40880001B9953 /* RealmObjects */,
-				0158B67D22C24C8F00BE425E /* Networking */,
 				0113187C22DD20770049A887 /* RealmDataMethods.swift */,
+				01515C2322E0BB6400811E7F /* RealmEncryption.swift */,
+				0158B67D22C24C8F00BE425E /* Networking */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -220,7 +218,6 @@
 			isa = PBXGroup;
 			children = (
 				0158B66822C2293F00BE425E /* Info.plist */,
-				011FA7F422DBDFD600A347A4 /* GoogleService-Info.plist */,
 				0158B66322C2293F00BE425E /* Assets.xcassets */,
 				0158B65C22C2293F00BE425E /* AppDelegate.swift */,
 				0158B67E22C26C6100BE425E /* gemunu-libre.medium.otf */,
@@ -277,7 +274,7 @@
 				01143A8722D11E180022AA79 /* UIView.swift */,
 				01182EA022D20B57001B9953 /* Array.swift */,
 				018E705822D79DE00047B46A /* PasswordRegex.swift */,
-				011FA7F822DBEDDA00A347A4 /* UIApplication.swift */,
+				01515C1722DE90C200811E7F /* TextView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -378,7 +375,6 @@
 				0158B66422C2293F00BE425E /* Assets.xcassets in Resources */,
 				0158B66222C2293F00BE425E /* Main.storyboard in Resources */,
 				0158B68122C26C6100BE425E /* gemunu-libre.semibold.otf in Resources */,
-				011FA7F522DBDFD600A347A4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,14 +433,14 @@
 				01FE216B22C46D2500BEA529 /* EmailViewController.swift in Sources */,
 				01182EA922D2D467001B9953 /* NotesViewController.swift in Sources */,
 				01F0D97E22D0B0C9005339AC /* ActivityIndicator.swift in Sources */,
-				011FA7F322DBBF4B00A347A4 /* RegisterViewController.swift in Sources */,
 				01E69C6922D409BD00D48542 /* WebsiteObject.swift in Sources */,
+				01515C1A22DF855300811E7F /* LoginViewController.swift in Sources */,
 				01143A8822D11E180022AA79 /* UIView.swift in Sources */,
 				0113187922DCE12E0049A887 /* SaveWebsiteTableViewController.swift in Sources */,
 				01E69C6F22D4C48600D48542 /* SaveNoteViewController.swift in Sources */,
 				014F5B1422CC019100F03EA3 /* RangeModel.swift in Sources */,
+				01515C2422E0BB6400811E7F /* RealmEncryption.swift in Sources */,
 				01E69C6D22D42CE600D48542 /* DetailNoteViewController.swift in Sources */,
-				011FA7F122DBB58B00A347A4 /* SignInViewController.swift in Sources */,
 				01182EA122D20B57001B9953 /* Array.swift in Sources */,
 				01182F0D22D40853001B9953 /* NoteTableViewCell.swift in Sources */,
 				019F6DCA22C6DD6800A05C68 /* WebsiteTableViewCell.swift in Sources */,
@@ -461,6 +457,7 @@
 				019F6DCC22C6EE2900A05C68 /* String.swift in Sources */,
 				0113187B22DCEC110049A887 /* DetailWebsiteTableViewController.swift in Sources */,
 				01FE216522C2E57F00BEA529 /* SettingsViewController.swift in Sources */,
+				01515C1822DE90C200811E7F /* TextView.swift in Sources */,
 				01CCFEF722C94F48005509E4 /* PasswordService.swift in Sources */,
 				018E705922D79DE00047B46A /* PasswordRegex.swift in Sources */,
 				01F0D97822CEC67E005339AC /* Date.swift in Sources */,
@@ -471,7 +468,6 @@
 				0113187F22DD434F0049A887 /* HeaderEmailTableViewCell.swift in Sources */,
 				019F6DCE22C718F900A05C68 /* NewsViewController.swift in Sources */,
 				014F5B1222CAC20200F03EA3 /* Alerts.swift in Sources */,
-				011FA7F922DBEDDA00A347A4 /* UIApplication.swift in Sources */,
 				014F5B0E22C9A66A00F03EA3 /* NewsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

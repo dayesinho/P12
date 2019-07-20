@@ -10,7 +10,5 @@ target 'PwLocker' do
 pod 'BEMCheckBox'
 pod 'RealmSwift'
 pod 'TwicketSegmentedControl'
-pod 'Firebase/Core'
-pod 'Firebase/Auth'
 
 end

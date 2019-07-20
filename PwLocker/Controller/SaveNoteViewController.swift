@@ -21,7 +21,6 @@ class SaveNoteViewController: UIViewController {
     @IBOutlet weak var noteTitleTextField: UITextField!
     @IBOutlet weak var noteTextView: UITextView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setSegmentControl()

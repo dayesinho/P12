@@ -17,7 +17,7 @@ class SettingsViewController: UIViewController {
         ["ContactUsSegue"]
     ]
     let twoDimensionalArray = [
-        ["Change Master Password", "Delete all my data"],
+        ["Change Master Key", "Delete all my data"],
         ["Privacy Policy", "Credits"],
         ["Contact Us"]
     ]

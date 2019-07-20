@@ -13,9 +13,14 @@ class DeleteAllViewController: UIViewController {
 
     let realm = try! Realm()
     
+    @IBOutlet weak var deleteButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        UIView.animate(withDuration: 10, delay: 0, options: [.allowUserInteraction], animations: {
+            self.deleteButton.alpha = 1
+        }, completion: nil)
     }
     
     @IBAction func deleteButtonTapped(_ sender: Any) {

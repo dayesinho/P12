@@ -19,6 +19,11 @@ class PasswordViewController: UIViewController {
         super.viewDidLoad()
         passwordTextField.roundCorners(corners: [.topLeft, .bottomLeft], radius: 50.0)
         searchButton.roundCorners(corners: [.topRight, .bottomRight], radius: 50.0)
+        toggleActivityIndicator(loadingLabel: loadingLabel, activityIndicator: activityIndicator, shown: false)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        descriptionResultTextView.centerVertically()
     }
     
     @IBOutlet weak var passwordTextField: UITextField! {
@@ -31,12 +36,19 @@ class PasswordViewController: UIViewController {
     @IBOutlet weak var titleResultLabel: UILabel!
     @IBOutlet weak var descriptionResultTextView: UITextView!
     @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var loadingLabel: UILabel!
+    
+    
     
     @IBAction func searchButton(_ sender: Any) {
         
         guard let password = passwordTextField.text else { return }
-
+        
+        toggleActivityIndicator(loadingLabel: loadingLabel, activityIndicator: activityIndicator, shown: true)
+        
         _ = try? passwordService.search(password: password) { result in
+            self.toggleActivityIndicator(loadingLabel: self.loadingLabel, activityIndicator: self.activityIndicator, shown: false)
             if let pwnedTimes = try? result() {
                 if pwnedTimes > 0 {
                     self.pwnedPresentation(pwnedNumber: pwnedTimes)
@@ -65,7 +77,6 @@ class PasswordViewController: UIViewController {
     
     func pwnedPresentation(pwnedNumber: UInt) {
         DispatchQueue.main.async {
-            self.passwordResultView.layer.borderWidth = 2
             self.passwordResultView.backgroundColor = self.red
             self.descriptionResultTextView.backgroundColor = self.red
             self.titleResultLabel.text = "Pwned!"
@@ -76,7 +87,6 @@ class PasswordViewController: UIViewController {
     
     func notPwnedPresentation() {
         DispatchQueue.main.async {
-            self.passwordResultView.layer.borderWidth = 2
             self.passwordResultView.backgroundColor = self.green
             self.descriptionResultTextView.backgroundColor = self.green
             self.titleResultLabel.text = "No pwnage found!"

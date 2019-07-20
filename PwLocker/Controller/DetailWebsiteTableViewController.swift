@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import Security
 
 class DetailWebsiteTableViewController: UITableViewController {
     
@@ -42,15 +43,14 @@ class DetailWebsiteTableViewController: UITableViewController {
     
         UIView.animate(withDuration: 0, delay: 0, options: [.allowUserInteraction], animations: {
             self.headerCell.alpha = 0
-        }, completion: nil)
-        UIView.animate(withDuration: 0, delay: 0, options: [.allowUserInteraction], animations: {
             self.deleteCell.alpha = 0
         }, completion: nil)
         
         headerCell.isHidden = false
         deleteCell.isHidden = false
     }
-    
+
+
     func toggleEditingMode(editing: Bool) {
         
         emailAddressTextField.isUserInteractionEnabled = editing
@@ -76,20 +76,36 @@ class DetailWebsiteTableViewController: UITableViewController {
     }
     
     @objc func editTapped() {
+        UIView.animate(withDuration: 1, animations: {
+            self.emailAddressTextField.layer.backgroundColor = UIColor.darkGray.cgColor
+            self.loginTextField.layer.backgroundColor = UIColor.darkGray.cgColor
+            self.passwordTextField.layer.backgroundColor = UIColor.darkGray.cgColor
+            self.websiteTextField.layer.backgroundColor = UIColor.darkGray.cgColor
+            self.nameTextField.layer.backgroundColor = UIColor.darkGray.cgColor
+        })
+        
         UIView.animate(withDuration: 1, delay: 0, options: [.allowUserInteraction], animations: {
             self.headerCell.alpha = 1
+             self.deleteCell.alpha = 1
             self.headerCell.isHidden = false
+             self.deleteCell.isHidden = false
         }, completion: nil)
-        UIView.animate(withDuration: 1, delay: 0, options: [.allowUserInteraction], animations: {
-            self.deleteCell.alpha = 1
-            self.deleteCell.isHidden = false
-        }, completion: nil)
+        
         toggleEditingMode(editing: true)
         toggleDifferentColor(background: UIColor.darkGray, textColor: UIColor.white)
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(saveTapped))
     }
     
     @objc func saveTapped() {
+        
+        UIView.animate(withDuration: 1, animations: {
+            self.emailAddressTextField.layer.backgroundColor = self.customGray.cgColor
+            self.loginTextField.layer.backgroundColor = self.customGray.cgColor
+            self.passwordTextField.layer.backgroundColor = self.customGray.cgColor
+            self.websiteTextField.layer.backgroundColor = self.customGray.cgColor
+            self.nameTextField.layer.backgroundColor = self.customGray.cgColor
+        })
+        
         toggleEditingMode(editing: false)
         toggleDifferentColor(background: customGray, textColor: UIColor.white)
 
@@ -104,8 +120,6 @@ class DetailWebsiteTableViewController: UITableViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editTapped))
         UIView.animate(withDuration: 1, delay: 0, options: [.allowUserInteraction], animations: {
             self.headerCell.alpha = 0
-        }, completion: nil)
-        UIView.animate(withDuration: 1, delay: 0, options: [.allowUserInteraction], animations: {
             self.deleteCell.alpha = 0
         }, completion: nil)
     }
@@ -121,7 +135,7 @@ class DetailWebsiteTableViewController: UITableViewController {
         try? realm.write {
             realm.delete(unwrappedObject)
         }
-        dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: "backHomePage", sender: self)
     }
     
     @IBAction func copyEmailButtonTapped(_ sender: Any) {
@@ -138,7 +152,7 @@ class DetailWebsiteTableViewController: UITableViewController {
     
     @IBAction func connectToWebsiteButtonTapped(_ sender: Any) {
         guard let urlForSafari = websiteTextField.text else { return }
-        guard let url = URL(string: urlForSafari) else { return }
+        guard let url = URL(string: "https://www." + urlForSafari) else { return }
         UIApplication.shared.open(url)
     }
     

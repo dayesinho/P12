@@ -13,7 +13,6 @@ class SaveWebsiteTableViewController: UITableViewController {
 
     let websiteObject = WebsiteObject()
     let realm = try? Realm()
-    let email = UserDefaults.standard.object(forKey: "clientEmail")
     
     @IBOutlet var saveWebsiteTableView: UITableView!
     @IBOutlet weak var emailAddressTextField: UITextField!
@@ -26,7 +25,6 @@ class SaveWebsiteTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.saveWebsiteTableView.tableFooterView = UIView()
-        emailAddressTextField.text = email as? String
         print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
     
@@ -63,5 +61,9 @@ class SaveWebsiteTableViewController: UITableViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
 }

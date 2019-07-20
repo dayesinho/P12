@@ -17,6 +17,7 @@ class EmailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        toggleActivityIndicator(loadingLabel: loadingLabel, activityIndicator: activityIndicator, shown: false)
         emailAddressTextField.roundCorners(corners: [.topLeft, .bottomLeft], radius: 20)
         searchButton.roundCorners(corners: [.topRight, .bottomRight], radius: 20)
     }
@@ -30,13 +31,19 @@ class EmailViewController: UIViewController {
     }
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var noPwnageView: UIView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var loadingLabel: UILabel!
+    
+    
     
     @IBAction func validationButton(_ sender: UIButton) {
-        noPwnageView.alpha = 0
         
+        noPwnageView.alpha = 0
         guard let account = emailAddressTextField.text else { return }
         
+        toggleActivityIndicator(loadingLabel: loadingLabel, activityIndicator: activityIndicator, shown: true)
         emailService.getEmailBreach(account: account) { (success, emailBreach) in
+            self.toggleActivityIndicator(loadingLabel: self.loadingLabel, activityIndicator: self.activityIndicator, shown: false)
             if success, let emailBreach = emailBreach {
                 self.emailBreach = emailBreach
                 self.emailBreachTableView.isHidden = false
