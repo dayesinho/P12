@@ -23,7 +23,7 @@ class WebsiteTableViewCell: UITableViewCell {
     var websiteCell: WebsiteObject! {
         didSet {
             websiteLabel.text = websiteCell.name
-            guard let urlSaved = websiteCell.website else { return }
+             let urlSaved = websiteCell.website
             
 //            let url = NSURL(string: urlSaved)
 //            guard let domain = url?.host else { return }

@@ -12,7 +12,7 @@ import RealmSwift
 class SaveWebsiteTableViewController: UITableViewController {
 
     let websiteObject = WebsiteObject()
-    let realm = try? Realm()
+    let realmEncryption = RealmEncryption()
     
     @IBOutlet var saveWebsiteTableView: UITableView!
     @IBOutlet weak var emailAddressTextField: UITextField!
@@ -30,15 +30,7 @@ class SaveWebsiteTableViewController: UITableViewController {
     
     @IBAction func saveButtonTapped(_ sender: Any) {
         
-        websiteObject.emailAddress = emailAddressTextField.text
-        websiteObject.login = loginTextField.text
-        websiteObject.password = passwordTextField.text
-        websiteObject.website = websiteTextField.text
-        websiteObject.name = nameTextField.text?.firstUppercased
-        
-        try? realm?.write {
-            realm?.add(websiteObject)
-        }
+        realmEncryption.saveWebsiteEncrypted(email: emailAddressTextField, login: loginTextField, password: passwordTextField, website: websiteTextField, name: nameTextField)
         
         dismiss(animated: true, completion: nil)
     }

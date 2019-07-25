@@ -11,9 +11,9 @@ import RealmSwift
 
 class WebsiteObject: Object {
     
-    @objc dynamic var emailAddress: String?
-    @objc dynamic var login: String?
-    @objc dynamic var password: String?
-    @objc dynamic var website: String?
-    @objc dynamic var name: String?
+    @objc dynamic var emailAddress = ""
+    @objc dynamic var login = ""
+    @objc dynamic var password = ""
+    @objc dynamic var website = ""
+    @objc dynamic var name = ""
 }

@@ -10,8 +10,6 @@ import UIKit
 import RealmSwift
 
 class DeleteAllViewController: UIViewController {
-
-    let realm = try! Realm()
     
     @IBOutlet weak var deleteButton: UIButton!
     
@@ -43,6 +41,9 @@ class DeleteAllViewController: UIViewController {
     }
     
     func deleteAll() {
+        
+        let configuration = Realm.Configuration(encryptionKey: getKey() as Data)
+        let realm = try! Realm(configuration: configuration)
         try! realm.write {
             realm.deleteAll()
         }

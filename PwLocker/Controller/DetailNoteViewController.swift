@@ -10,8 +10,7 @@ import UIKit
 import RealmSwift
 
 class DetailNoteViewController: UIViewController {
-    
-    let realm = try! Realm()
+ 
     var noteObject: NoteObject?
     
     @IBOutlet weak var noteContentTextView: UITextView!
@@ -41,11 +40,17 @@ class DetailNoteViewController: UIViewController {
     }
 
     @IBAction func deleteButtonTapped(_ sender: Any) {
-        guard let noteObjectUnwrapped = noteObject else { return }
-                    try? realm.write {
-                    realm.delete(noteObjectUnwrapped)
-                }
-                _ = navigationController?.popViewController(animated: true)
+        
+        autoreleasepool {
+            guard let unwrappedNoteObject = noteObject else { return }
+            
+            let configuration = Realm.Configuration(encryptionKey: getKey() as Data)
+            let realm = try? Realm(configuration: configuration)
+            try? realm?.write {
+                realm?.delete(unwrappedNoteObject)
+            }
+             _ = navigationController?.popViewController(animated: true)
+        }
     }
     
     func showNoteDetails() {

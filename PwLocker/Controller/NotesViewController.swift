@@ -11,7 +11,6 @@ import RealmSwift
 
 class NotesViewController: UIViewController {
     
-    let realm = try? Realm()
     var noteObject: NoteObject?
     
     @IBOutlet weak var notesTableView: UITableView!
@@ -37,13 +36,18 @@ extension NotesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
+        let configuration = Realm.Configuration(encryptionKey: getKey() as Data)
+        let realm = try? Realm(configuration: configuration)
         let noteArray = realm?.objects(NoteObject.self)
         return noteArray?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let configuration = Realm.Configuration(encryptionKey: getKey() as Data)
+        let realm = try? Realm(configuration: configuration)
         let noteArray = realm?.objects(NoteObject.self)
+        
         let previewNoteData = noteArray?[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "NoteCell", for: indexPath) as! NoteTableViewCell
         cell.selectionStyle = .none
@@ -55,7 +59,10 @@ extension NotesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         notesTableView.isUserInteractionEnabled = true
         
+        let configuration = Realm.Configuration(encryptionKey: getKey() as Data)
+        let realm = try? Realm(configuration: configuration)
         let noteArray = realm?.objects(NoteObject.self)
+        
         noteObject = noteArray?[indexPath.row]
         self.performSegue(withIdentifier: "TransferNote", sender: self)
     }

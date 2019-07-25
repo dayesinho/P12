@@ -13,7 +13,7 @@ import TwicketSegmentedControl
 class SaveNoteViewController: UIViewController {
     
     let noteObject = NoteObject()
-    let realm = try? Realm()
+    let realmEncryption = RealmEncryption()
     let darkGray = UIColor(red: 85/255.0, green: 85/255.0, blue: 85/255.0, alpha: 1)
     let customGray = UIColor(red: 40/255.0, green: 40/255.0, blue: 40/255.0, alpha: 1)
     let green = UIColor(red: 51/255.0, green: 190/255.0, blue: 98/255.0, alpha: 1)
@@ -37,12 +37,7 @@ class SaveNoteViewController: UIViewController {
     
     @IBAction func saveButtonTapped(_ sender: Any) {
         
-        noteObject.noteTitle = noteTitleTextField.text
-        noteObject.noteContent = noteTextView.text
-        
-        try? realm?.write {
-            realm?.add(noteObject)
-        }
+        realmEncryption.saveNoteEncrypted(noteTitle: noteTitleTextField, noteContent: noteTextView)
         
         dismiss(animated: true, completion: nil)
     }
@@ -50,7 +45,7 @@ class SaveNoteViewController: UIViewController {
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
         
-         dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     fileprivate func setSegmentControl() {

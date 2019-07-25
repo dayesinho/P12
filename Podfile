@@ -8,7 +8,7 @@ target 'PwLocker' do
   # Pods for PwLocker
   
 pod 'BEMCheckBox'
-pod 'RealmSwift'
 pod 'TwicketSegmentedControl'
+pod 'RealmSwift'
 
 end

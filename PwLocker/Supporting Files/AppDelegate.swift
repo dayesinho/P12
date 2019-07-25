@@ -7,13 +7,19 @@
 //
 
 import UIKit
+import RealmSwift
+
+extension UIApplication {
+    typealias LaunchOptionsKey = UIApplication.LaunchOptionsKey
+}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {        
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         return true
     }
 

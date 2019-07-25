@@ -1,5 +1,5 @@
 //
-//  OTPViewController.swift
+//  LoginViewController.swift
 //  PwLocker
 //
 //  Created by Tavares on 17/07/2019.
@@ -10,8 +10,8 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    var Password1: String?
-    var Password2: String?
+    var password1: String?
+    var password2: String?
     var officalPassword: String?
     
     @IBOutlet weak var situationLabel: UILabel!
@@ -22,7 +22,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         connectButton.tag = 1
         setLabelMenu()
-//        accountAlreadyCreated()
     }
     
     fileprivate func setLabelMenu() {
@@ -30,9 +29,9 @@ class LoginViewController: UIViewController {
         
         if loginPass == nil {
             situationLabel.text = "Create your Master Key"
-            createPassword()
+            connectButton.setTitle("Create", for: UIControl.State.normal)
         } else {
-            accountAlreadyCreated()
+            situationLabel.text = "Enter your Master Key"
         }
     }
     
@@ -54,7 +53,8 @@ class LoginViewController: UIViewController {
             showAlert(title: "Error", message: "You need to insert a password")
         } else {
             situationLabel.text = "Confirm Password"
-            Password1 = displayTextField.text
+            connectButton.setTitle("Confirm", for: UIControl.State.normal)
+            password1 = displayTextField.text
             displayTextField.text = ""
         }
     }
@@ -63,10 +63,10 @@ class LoginViewController: UIViewController {
         if displayTextField.text == "" {
             showAlert(title: "Error", message: "Confirmation password is required")
         } else {
-            Password2 = displayTextField.text
+            password2 = displayTextField.text
         }
-        if Password1 == Password2 {
-            officalPassword = Password1
+        if password1 == password2 {
+            officalPassword = password1
             UserDefaults.standard.set(officalPassword, forKey: "loginPass")
             displayTextField.text = ""
         } else {

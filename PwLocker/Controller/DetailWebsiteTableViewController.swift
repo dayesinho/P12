@@ -12,8 +12,7 @@ import Security
 
 class DetailWebsiteTableViewController: UITableViewController {
     
-    let realm = try! Realm()
-    let realmDataMethods = RealmDataMethods()
+    let realmEncryption = RealmEncryption()
     var websiteObject: WebsiteObject?
     let customGray = UIColor(red: 40/255.0, green: 40/255.0, blue: 40/255.0, alpha: 1)
     
@@ -109,13 +108,7 @@ class DetailWebsiteTableViewController: UITableViewController {
         toggleEditingMode(editing: false)
         toggleDifferentColor(background: customGray, textColor: UIColor.white)
 
-        try? realmDataMethods.write {
-            websiteObject?.emailAddress = emailAddressTextField.text
-            websiteObject?.login = loginTextField.text
-            websiteObject?.password = passwordTextField.text
-            websiteObject?.website = websiteTextField.text
-            websiteObject?.name = nameTextField.text
-        }
+        realmEncryption.saveModificationsEncrypted(websiteObject: websiteObject, email: emailAddressTextField, login: loginTextField, password: passwordTextField, website: websiteTextField, name: nameTextField)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editTapped))
         UIView.animate(withDuration: 1, delay: 0, options: [.allowUserInteraction], animations: {
@@ -130,12 +123,16 @@ class DetailWebsiteTableViewController: UITableViewController {
     
     @IBAction func deleteButtonTapped(_ sender: Any) {
         
-        guard let unwrappedObject = websiteObject else { return }
-        
-        try? realm.write {
-            realm.delete(unwrappedObject)
+        autoreleasepool {
+            guard let unwrappedWebsiteObject = websiteObject else { return }
+            
+            let configuration = Realm.Configuration(encryptionKey: getKey() as Data)
+            let realm = try? Realm(configuration: configuration)
+            try? realm?.write {
+                realm?.delete(unwrappedWebsiteObject)
+            }
+            performSegue(withIdentifier: "backHomePage", sender: self)
         }
-        performSegue(withIdentifier: "backHomePage", sender: self)
     }
     
     @IBAction func copyEmailButtonTapped(_ sender: Any) {

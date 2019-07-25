@@ -35,7 +35,6 @@ open class TwicketSegmentedControl: UIControl {
         override var frame: CGRect {
             didSet {
                 sliderMaskView.frame = frame
-                sliderMaskView.backgroundColor = UIColor(red: 40/255.0, green: 40/255.0, blue: 40/255.0, alpha: 1)
             }
         }
 

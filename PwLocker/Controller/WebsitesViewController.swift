@@ -11,7 +11,6 @@ import RealmSwift
 
 class WebsitesViewController: UIViewController {
 
-    let realm = try? Realm()
     var websiteObject: WebsiteObject?
     
     @IBOutlet weak var websitesTableView: UITableView!
@@ -36,15 +35,19 @@ class WebsitesViewController: UIViewController {
 extension WebsitesViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+       
+        let configuration = Realm.Configuration(encryptionKey: getKey() as Data)
+        let realm = try? Realm(configuration: configuration)
         let websiteArray = realm?.objects(WebsiteObject.self)
-        
         return websiteArray?.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
+        let configuration = Realm.Configuration(encryptionKey: getKey() as Data)
+        let realm = try? Realm(configuration: configuration)
         let websiteArray = realm?.objects(WebsiteObject.self)
+        
         let previewWebsiteData = websiteArray?[indexPath.row]
         
          let cell = tableView.dequeueReusableCell(withIdentifier: "WebsiteCell", for: indexPath) as! WebsiteTableViewCell
@@ -57,7 +60,10 @@ extension WebsitesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         websitesTableView.isUserInteractionEnabled = true
         
+        let configuration = Realm.Configuration(encryptionKey: getKey() as Data)
+        let realm = try? Realm(configuration: configuration)
         let websiteArray = realm?.objects(WebsiteObject.self)
+        
         websiteObject = websiteArray?[indexPath.row]
         self.performSegue(withIdentifier: "TransferWebsite", sender: self)
     }

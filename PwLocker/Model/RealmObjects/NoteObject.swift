@@ -11,6 +11,6 @@ import RealmSwift
 
 class NoteObject: Object {
     
-    @objc dynamic var noteTitle: String?
-    @objc dynamic var noteContent: String?
+    @objc dynamic var noteTitle = ""
+    @objc dynamic var noteContent = ""
 }
