@@ -70,6 +70,10 @@ class GeneratorViewController: UIViewController, BEMCheckBoxDelegate {
     }
     
     @IBAction func copyButton(_ sender: UIButton) {
+        
+        copyButton.isEnabled = false
+        Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: Selector(("enablefunc")), userInfo: nil, repeats: false)
+        
         UIPasteboard.general.string = passwordTextField.text
         copyButton.backgroundColor = UIColor.darkGray
         
@@ -79,6 +83,10 @@ class GeneratorViewController: UIViewController, BEMCheckBoxDelegate {
         }, completion: { _ in
             self.copyButton.setTitle("Copy", for: UIControl.State.normal)
         })
+    }
+    
+    @objc func enablefunc() {
+        copyButton.isEnabled = true
     }
     
     func generateRandomString(numberOfCharacters: Int) -> String {

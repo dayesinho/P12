@@ -29,7 +29,6 @@ class RealmEncryption {
                 realm?.add(websiteObject)
             }
         }
-        checkKeyValidity()
     }
     
     func saveNoteEncrypted(noteTitle: UITextField, noteContent: UITextView) {
@@ -46,7 +45,6 @@ class RealmEncryption {
                 realm?.add(noteObject)
             }
         }
-        checkKeyValidity()
     }
     
     func saveModificationsEncrypted(websiteObject: WebsiteObject?, email: UITextField, login: UITextField, password: UITextField, website: UITextField, name: UITextField) {
@@ -64,7 +62,6 @@ class RealmEncryption {
                 websiteObject?.name = name.text ?? ""
             }
         }
-        checkKeyValidity()
     }
     
     func saveNoteModifications(noteObject: NoteObject?, noteTitle: UITextField, noteContent: UITextView) {
@@ -77,10 +74,7 @@ class RealmEncryption {
                 noteObject?.noteContent = noteContent.text ?? ""
             }
         }
-        checkKeyValidity()
     }
-    
-    //     Reopening with the correct key works and can read the data
     
     func pushDataEncrypted(indexPath: Int, email: UITextField, login: UITextField, password: UITextField, website: UITextField, name: UITextField) {
         
@@ -97,7 +91,6 @@ class RealmEncryption {
             website.text = websiteObject?.website
             name.text = websiteObject?.name
         }
-        checkKeyValidity()
     }
     
     func checkKeyValidity() {
@@ -105,7 +98,7 @@ class RealmEncryption {
         // Opening with wrong key fails since it decrypts to the wrong thing
         autoreleasepool {
             do {
-                let configuration = Realm.Configuration(encryptionKey: "1234567890123456789012345678901234567890123456789012345678901234".data(using: String.Encoding.utf8, allowLossyConversion: false))
+                let configuration = Realm.Configuration(encryptionKey: "xEQK:G/S,^LB$(8,}kfYr&77$3R%F5@@`;+iryicH~!Tnz>M8S^:`}S&@|&RyhDt".data(using: String.Encoding.utf8, allowLossyConversion: false))
                 _ = try Realm(configuration: configuration)
             } catch {
                 print(error.localizedDescription)

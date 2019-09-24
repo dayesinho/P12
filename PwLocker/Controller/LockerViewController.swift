@@ -8,6 +8,7 @@
 
 import UIKit
 import TwicketSegmentedControl
+import RealmSwift
 
 class LockerViewController: UIViewController {
 
@@ -30,6 +31,8 @@ class LockerViewController: UIViewController {
         effect = visualEffectView.effect
         visualEffectView.effect = nil
         setSegmentControl()
+        
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
     
     fileprivate func animateIn() {

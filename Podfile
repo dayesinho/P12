@@ -10,5 +10,6 @@ target 'PwLocker' do
 pod 'BEMCheckBox'
 pod 'TwicketSegmentedControl'
 pod 'RealmSwift'
+pod 'Navajo-Swift'
 
 end

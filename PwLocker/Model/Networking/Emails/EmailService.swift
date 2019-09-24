@@ -12,7 +12,7 @@ class EmailService {
     
     private var task: URLSessionDataTask?
     private var emailSession: URLSession
-    fileprivate let apiEmailBreach: String = "https://haveibeenpwned.com/api/v2/breachedaccount/"
+    fileprivate let apiEmailBreach: String = "https://haveibeenpwned.com/api/v3/breachedaccount/"
     
     init(emailSession: URLSession = URLSession(configuration: .default)) {
         self.emailSession = emailSession

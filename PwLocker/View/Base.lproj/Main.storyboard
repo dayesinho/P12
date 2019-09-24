@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BCn-d6-SfK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YUn-hh-ybR">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1734,43 +1734,103 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mcd-nQ-zac">
-                                <rect key="frame" x="159" y="93" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bgZ-cb-PFg">
-                                <rect key="frame" x="159" y="196" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DWg-dm-hE0">
-                                <rect key="frame" x="159" y="283" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIt-uF-jIu">
-                                <rect key="frame" x="184" y="527" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="7cG-yF-UfW">
+                                <rect key="frame" x="50" y="50" width="314" height="270"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your Master Key" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mcd-nQ-zac">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="40"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="yU7-yW-lpf"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your new Master Key" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bgZ-cb-PFg">
+                                        <rect key="frame" x="0.0" y="115" width="314" height="40"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm the Master Key" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DWg-dm-hE0">
+                                        <rect key="frame" x="0.0" y="230" width="314" height="40"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIt-uF-jIu">
+                                <rect key="frame" x="75" y="573" width="264" height="50"/>
+                                <color key="backgroundColor" red="0.1980436444" green="0.74697035550000002" blue="0.38535201549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="RvV-sD-zej"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Change Master Key">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="changeMasterKeyBUtton:" destination="8IJ-f0-Ybt" eventType="touchUpInside" id="hRk-Vi-f5p"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.15518405569999999" green="0.15518405569999999" blue="0.15518405569999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gVN-uo-psg" firstAttribute="bottom" secondItem="FIt-uF-jIu" secondAttribute="bottom" constant="50" id="6oq-DF-4B9"/>
+                            <constraint firstItem="gVN-uo-psg" firstAttribute="trailing" secondItem="7cG-yF-UfW" secondAttribute="trailing" constant="50" id="8Ua-pV-2c4"/>
+                            <constraint firstItem="FIt-uF-jIu" firstAttribute="leading" secondItem="gVN-uo-psg" secondAttribute="leading" constant="75" id="9W8-Be-KIX"/>
+                            <constraint firstItem="7cG-yF-UfW" firstAttribute="top" secondItem="gVN-uo-psg" secondAttribute="top" constant="50" id="G5H-98-oJc"/>
+                            <constraint firstItem="7cG-yF-UfW" firstAttribute="leading" secondItem="gVN-uo-psg" secondAttribute="leading" constant="50" id="W1T-E9-thx"/>
+                            <constraint firstItem="gVN-uo-psg" firstAttribute="trailing" secondItem="FIt-uF-jIu" secondAttribute="trailing" constant="75" id="sb6-Eo-ZK5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gVN-uo-psg"/>
                     </view>
+                    <connections>
+                        <outlet property="confirmNewMasterKeyTextField" destination="DWg-dm-hE0" id="7gg-pA-ipM"/>
+                        <outlet property="newMasterKeyTextField" destination="bgZ-cb-PFg" id="pJb-H7-EKN"/>
+                        <outlet property="originalMasterKeyTextField" destination="Mcd-nQ-zac" id="fux-B3-YQx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QPN-rn-1Lu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5587" y="415"/>
+            <point key="canvasLocation" x="5586.9565217391309" y="414.50892857142856"/>
         </scene>
         <!--Delete all my data-->
         <scene sceneID="PCP-zR-cv2">
@@ -2597,6 +2657,7 @@ By email: passlocker@protonmail.ch</string>
                             <constraint firstItem="ngd-zH-UsD" firstAttribute="bottom" secondItem="r32-cD-Ecz" secondAttribute="bottom" id="CSa-R5-Pbj"/>
                             <constraint firstItem="r8o-bK-PbJ" firstAttribute="centerY" secondItem="wkb-5v-H7G" secondAttribute="centerY" id="CcL-sP-GQe"/>
                             <constraint firstAttribute="trailing" secondItem="lxH-u4-H5N" secondAttribute="trailing" constant="15" id="DgZ-ji-cHf"/>
+                            <constraint firstItem="r8o-bK-PbJ" firstAttribute="centerY" secondItem="wkb-5v-H7G" secondAttribute="centerY" id="Dnv-TN-H8w"/>
                             <constraint firstItem="r32-cD-Ecz" firstAttribute="leading" secondItem="wkb-5v-H7G" secondAttribute="leading" constant="40" id="IKg-jQ-SnM"/>
                             <constraint firstItem="Yev-g3-sfO" firstAttribute="trailing" secondItem="2fm-OI-dhq" secondAttribute="trailing" id="Kqs-xk-yTN"/>
                             <constraint firstItem="2fm-OI-dhq" firstAttribute="trailing" secondItem="r8o-bK-PbJ" secondAttribute="trailing" id="Peo-t8-EUJ"/>
@@ -2700,8 +2761,8 @@ By email: passlocker@protonmail.ch</string>
                                 <color key="textColor" red="0.20000000000000001" green="0.74509803919999995" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encrypted:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnd-sj-a7e">
-                                <rect key="frame" x="20" y="100" width="374" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Request Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnd-sj-a7e">
+                                <rect key="frame" x="20" y="100" width="106" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="fuZ-yI-uef"/>
                                 </constraints>
@@ -2715,9 +2776,9 @@ By email: passlocker@protonmail.ch</string>
                             <constraint firstItem="yqN-5n-Bpz" firstAttribute="top" secondItem="Q8L-jG-QWp" secondAttribute="bottom" constant="100" id="0BD-md-yLR"/>
                             <constraint firstItem="yqN-5n-Bpz" firstAttribute="top" secondItem="Blw-TV-AAo" secondAttribute="bottom" constant="100" id="6kv-9b-FYL"/>
                             <constraint firstItem="bnd-sj-a7e" firstAttribute="leading" secondItem="qxa-c2-rH5" secondAttribute="leading" constant="20" id="Eeg-3V-ePK"/>
-                            <constraint firstItem="bnd-sj-a7e" firstAttribute="trailing" secondItem="Q8L-jG-QWp" secondAttribute="trailing" id="ExG-zN-8UR"/>
                             <constraint firstItem="Blw-TV-AAo" firstAttribute="top" secondItem="qxa-c2-rH5" secondAttribute="top" constant="30" id="GR3-A9-RLl"/>
                             <constraint firstItem="qxa-c2-rH5" firstAttribute="trailing" secondItem="Q8L-jG-QWp" secondAttribute="trailing" constant="20" id="JAE-uf-kvD"/>
+                            <constraint firstItem="qxa-c2-rH5" firstAttribute="trailing" secondItem="bnd-sj-a7e" secondAttribute="trailing" constant="288" id="Wnl-sz-eeJ"/>
                             <constraint firstItem="bnd-sj-a7e" firstAttribute="top" secondItem="Q8L-jG-QWp" secondAttribute="bottom" constant="30" id="YbY-zR-LcA"/>
                             <constraint firstItem="qxa-c2-rH5" firstAttribute="trailing" secondItem="yqN-5n-Bpz" secondAttribute="trailing" constant="20" id="bN5-81-FII"/>
                             <constraint firstItem="Q8L-jG-QWp" firstAttribute="top" secondItem="qxa-c2-rH5" secondAttribute="top" constant="30" id="cRS-Pc-Pd0"/>

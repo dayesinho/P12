@@ -8,7 +8,7 @@
 
 import UIKit
 import RealmSwift
-import Security
+import Navajo_Swift
 
 class DetailWebsiteTableViewController: UITableViewController {
     
@@ -47,6 +47,7 @@ class DetailWebsiteTableViewController: UITableViewController {
         
         headerCell.isHidden = false
         deleteCell.isHidden = false
+        showWebsiteObject()
     }
 
 
@@ -160,6 +161,15 @@ class DetailWebsiteTableViewController: UITableViewController {
         passwordTextField.text = websiteObject?.password
         websiteTextField.text = websiteObject?.website
         nameTextField.text = websiteObject?.name
+        
+        let password = websiteObject?.password ?? ""
+        let strength = Navajo.strength(ofPassword: password)
+        
+        if passwordTextField.text == "" {
+            passwordStrengthTextField.text = ""
+        } else {
+            passwordStrengthTextField.text = Navajo.localizedString(forStrength: strength)
+        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

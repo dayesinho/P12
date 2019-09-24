@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import Navajo_Swift
 
 class SaveWebsiteTableViewController: UITableViewController {
 
@@ -26,6 +27,15 @@ class SaveWebsiteTableViewController: UITableViewController {
         super.viewDidLoad()
         self.saveWebsiteTableView.tableFooterView = UIView()
         print(Realm.Configuration.defaultConfiguration.fileURL!)
+        showPasswordStrength()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        showPasswordStrength()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        showPasswordStrength()
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
@@ -40,7 +50,18 @@ class SaveWebsiteTableViewController: UITableViewController {
           dismiss(animated: true, completion: nil)
     }
     
-    
+    func showPasswordStrength() {
+        
+        let password = passwordTextField.text ?? ""
+        let strength = Navajo.strength(ofPassword: password)
+        
+        if password == "" {
+            strengthPasswordTextField.text = ""
+        } else {
+            strengthPasswordTextField.text = Navajo.localizedString(forStrength: strength)
+        }
+    }
+
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
